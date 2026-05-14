@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билеты на выставки — ВЕСТ-ИСТ ТРЕЙД (Китай, Бишкек, Азия)</title>
+  <meta name="description" content="Организация посещения офлайн-выставок в Китае и Азии. Фильтр по городу и отрасли, регистрация делегата, билеты — единый оператор в Бишкеке. RUB и KGS.">
+  <meta name="keywords" content="Импорт из Китая в ЕАЭС, Логистика Бишкек, Оплата в рублях за китайские товары">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="/tickets/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="tickets-page">
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="logo">ВЕСТ-ИСТ ТРЕЙД <span class="cn-mark">西东贸易</span></a>
+    <nav class="nav-links nav-links--tickets">
+      <a href="/#about">О компании</a>
+      <a href="/#roles">Две роли</a>
+      <a href="/#services">Услуги</a>
+      <a href="/#directions">Направления</a>
+      <a href="/#media">PR и медиа</a>
+      <a href="/#geography">География</a>
+      <a href="/logistics/">Логистика</a>
+      <a href="/gpu-servers/">GPU-серверы</a>
+      <a href="/tickets/" class="nav-link-tickets">Купить билет</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="top" aria-label="Билеты и делегаты на выставки в Азии">
+  <div class="hero-watermark" aria-hidden="true">展</div>
+  <div class="container hero-content">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">
+          Выставки · делегаты · билеты
+          <span class="cn-tag cn">展会服务</span>
+        </p>
+        <h1><span class="accent">Организация посещения</span> офлайн-выставок в Азии</h1>
+        <p class="hero-sub-cn cn">展览 · 参观 · 商务陪同</p>
+        <p class="hero-lead">
+          Комплексные B2B-услуги от <strong>единого оператора</strong> в Кыргызстане. Календарь крупных мероприятий в Китае,
+          Юго-Восточной Азии и регионе ЕАЭС — отфильтруйте по <strong>городу</strong> и <strong>отрасли</strong>, добавьте пакет
+          «организация посещения выставки»: регистрация делегата, билеты и поддержка на площадке. Расчёты — <strong>RUB</strong>, <strong>KGS</strong>.
+        </p>
+        <div class="hero-logistics-strip" aria-label="Ключевые локации календаря">
+          <span class="hero-route-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16v2H4v-2zm0-4l4-8 4 4 4-6 4 8" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="1.5" fill="currentColor"/></svg>
+          </span>
+          <span class="hero-route-pill">Гуанчжоу</span>
+          <span class="hero-route-arrow" aria-hidden="true">·</span>
+          <span class="hero-route-pill">Шанхай / Шэньчжэнь</span>
+          <span class="hero-route-arrow" aria-hidden="true">·</span>
+          <span class="hero-route-pill">Бангкок</span>
+          <span class="hero-route-arrow" aria-hidden="true">·</span>
+          <span class="hero-route-pill">Бишкек</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-arrow" href="#tickets-calendar">Смотреть календарь</a>
+          <button type="button" class="btn btn-ghost btn-arrow" data-open-ticket-modal data-event="">Запросить делегата</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="hero-photo-credit">Бишкек и горы Тянь-Шаня · вид с холма «Кузнечная крепость» · <a href="https://commons.wikimedia.org/wiki/File:Bishkek_03-2016_img02_view_from_Kuznechnaya_Hill.jpg" target="_blank" rel="noopener noreferrer">A.Savin</a> / Wikimedia Commons · Free Art License</p>
+</section>
+
+<main class="tickets-main">
+  <section class="section tickets-controls--tight" id="tickets-calendar">
+    <div class="container">
+      <p class="eyebrow">Календарь <span class="cn-tag cn">筛选</span></p>
+      <h2 class="tickets-h1" style="margin-top:0">Выставки и форумы — ориентиры по датам и площадкам</h2>
+      <p class="tickets-lead tickets-lead--compact">Ниже примеры площадок; точные окна проведения, квоты билетов и номинал фиксируем в переписке и счёте после согласования с организатором.</p>
+      <hr class="rule-gold rule-gold--tight">
+
+      <div class="tickets-filters" role="search" aria-label="Фильтр выставок">
+        <div class="tickets-filter-group">
+          <label class="tickets-filter-label" for="tickets-filter-city">Город / страна</label>
+          <select id="tickets-filter-city" class="tickets-select">
+            <option value="all" selected>Все локации</option>
+            <option value="guangzhou">Гуанчжоу, Китай</option>
+            <option value="shanghai">Шанхай, Китай</option>
+            <option value="shenzhen">Шэньчжэнь, Китай</option>
+            <option value="bangkok">Бангкок, Таиланд</option>
+            <option value="bishkek">Бишкек, Кыргызстан</option>
+            <option value="almaty">Алматы, Казахстан</option>
+            <option value="dubai">Дубай, ОАЭ</option>
+          </select>
+        </div>
+        <div class="tickets-filter-group">
+          <label class="tickets-filter-label" for="tickets-filter-cat">Категория</label>
+          <select id="tickets-filter-cat" class="tickets-select">
+            <option value="all" selected>Все категории</option>
+            <option value="electronics">Электроника, оборудование</option>
+            <option value="consumer">Потребительская электроника</option>
+            <option value="it">Инновации и ИТ</option>
+            <option value="beauty">Косметика и красота</option>
+            <option value="building">Стройматериалы, мебель</option>
+            <option value="textile">Текстиль, лёгкая промышленность</option>
+            <option value="trade">Комплексная торговля (FMCG)</option>
+            <option value="food">Продукты питания</option>
+          </select>
+        </div>
+        <p class="tickets-filter-hint">Как на публичном календаре: отбор по локации и профилю. Нет в списке — напишите в <a href="#tickets-request">форме заявки</a>, подберём выставку под задачу.</p>
+      </div>
+
+      <div class="tickets-grid" id="tickets-grid">
+
+        <article class="tickets-card" data-city="guangzhou" data-cat="trade">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-1.jpg" width="900" height="600" alt="Выставочный зал" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Комплексная торговля · Китай</span>
+          <h3 class="tickets-card-title">Кантонская ярмарка (Canton Fair)</h3>
+          <p class="tickets-card-dates">Весна / осень — сезоны по графику организатора</p>
+          <p class="tickets-card-place">Гуанчжоу</p>
+          <p class="tickets-card-blurb">Флагманский формат для закупщиков: билет посетителя, аккредитация, при необходимости сопровождение по площадке и перевод.</p>
+          <p class="tickets-card-compliance">Оказывается по договору; условия организатора и квоты — до выставления счёта.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу · RUB / KGS / USD</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Canton Fair (Guangzhou)">Запросить билет</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="shanghai" data-cat="it">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-2.jpg" width="900" height="643" alt="Технологическое мероприятие" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Инновации и ИТ</span>
+          <h3 class="tickets-card-title">Крупный tech / smart-industry (Шанхай)</h3>
+          <p class="tickets-card-dates">Ежегодно — даты по календарю</p>
+          <p class="tickets-card-place">Шанхай</p>
+          <p class="tickets-card-blurb">Делегация под B2B-контакты: регистрация, бейджи, координация встреч — от одного контрагента.</p>
+          <p class="tickets-card-compliance">Слоты и языки сессий зависят от организатора.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Tech expo Shanghai">Запросить участие</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="shenzhen" data-cat="consumer">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-2.jpg" width="900" height="643" alt="Электроника" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Потребительская электроника</span>
+          <h3 class="tickets-card-title">Электроника и гаджеты (Шэньчжэнь)</h3>
+          <p class="tickets-card-dates">По календарю отраслевых шоу</p>
+          <p class="tickets-card-place">Шэньчжэнь</p>
+          <p class="tickets-card-blurb">Подбор события под закупку и аудит поставщиков; билеты и локальная логистика в связке с нашим China-hub.</p>
+          <p class="tickets-card-compliance">Комплаенс платежа — по согласованной схеме договора.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Shenzhen electronics show">Запросить</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="bangkok" data-cat="beauty">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-3.jpg" width="900" height="600" alt="Отраслевая выставка" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Косметика и красота</span>
+          <h3 class="tickets-card-title">Beauty / cosmetic выставочное окно (Бангкок)</h3>
+          <p class="tickets-card-dates">По календарю ASEAN</p>
+          <p class="tickets-card-place">Бангкок</p>
+          <p class="tickets-card-blurb">Посещение и регистрация делегата; при необходимости — контакты локальных партнёров.</p>
+          <p class="tickets-card-compliance">Виза и перелёт — на стороне клиента, помогаем чек-листом.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Bangkok beauty expo">Запросить</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="bangkok" data-cat="textile">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-1.jpg" width="900" height="600" alt="Текстиль и лёгкая промышленность" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Текстиль, лёгкая промышленность</span>
+          <h3 class="tickets-card-title">Текстиль / fashion supply (Бангкок)</h3>
+          <p class="tickets-card-dates">Сезонные площадки</p>
+          <p class="tickets-card-place">Бангкок</p>
+          <p class="tickets-card-blurb">Для закупщиков из ЕАЭС: фильтрация поставщиков и билеты в одном контуре с торговым домом.</p>
+          <p class="tickets-card-compliance">Номинал входа зависит от типа дня и статуса делегата.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Bangkok textile / fashion">Запросить</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="bishkek" data-cat="building">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-3.jpg" width="900" height="600" alt="Строительная отрасль" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Стройматериалы · Кыргызстан</span>
+          <h3 class="tickets-card-title">Строительство / интерьер — локальные форумы (Бишкек)</h3>
+          <p class="tickets-card-dates">По календарю КР</p>
+          <p class="tickets-card-place">Бишкек</p>
+          <p class="tickets-card-blurb">Удобно для региональных команд: регистрация, билеты, связка с логистикой и поставками из Китая.</p>
+          <p class="tickets-card-compliance">Кыргызstan legal entity — ОсОО «ВЕСТ-ИСТ ТРЕЙД».</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу · KGS / RUB</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Bishkek building / interior expo">Запросить</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="almaty" data-cat="food">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-3.jpg" width="900" height="600" alt="Продукты питания" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Продукты питания · Казахстан</span>
+          <h3 class="tickets-card-title">Food / agro выставка (Алматы)</h3>
+          <p class="tickets-card-dates">По календарю KZ</p>
+          <p class="tickets-card-place">Алматы</p>
+          <p class="tickets-card-blurb">Билет посетителя и брокерские контакты; логистика через Казахстан и КР в ЕАЭС.</p>
+          <p class="tickets-card-compliance">Таможенный союз — единые правила после выпуска.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Almaty food / agro">Запросить</button>
+          </div>
+        </article>
+
+        <article class="tickets-card" data-city="dubai" data-cat="food">
+          <div class="tickets-card-media">
+            <img class="tickets-card-img" src="/tickets/card-expo-2.jpg" width="900" height="643" alt="Gulfood" loading="lazy">
+            <p class="tickets-card-photo-credit">Фото: Unsplash</p>
+          </div>
+          <span class="tickets-card-cat">Продукты · MENA</span>
+          <h3 class="tickets-card-title">Gulfood и смежные food-шоу (Дубай)</h3>
+          <p class="tickets-card-dates">Ежегодно</p>
+          <p class="tickets-card-place">Дубай, ОАЭ</p>
+          <p class="tickets-card-blurb">Для компаний с интересом к MENA: регистрация и координация через единый сервисный контракт.</p>
+          <p class="tickets-card-compliance">Валюта и платёж — по приложению к договору.</p>
+          <p class="tickets-card-price">
+            <span class="tickets-card-price-label">Ориентир</span>
+            <span class="tickets-card-price-value">по запросу</span>
+          </p>
+          <div class="tickets-card-actions">
+            <button type="button" class="btn btn-primary" data-open-ticket-modal data-event="Gulfood Dubai">Запросить</button>
+          </div>
+        </article>
+
+      </div>
+      <p class="tickets-empty" id="tickets-empty" hidden>По выбранным фильтрам событий нет — сбросьте фильтры или отправьте <a href="#tickets-request">заявку</a> на индивидуальный подбор.</p>
+    </div>
+  </section>
+
+  <section class="section section-paper">
+    <div class="container">
+      <p class="eyebrow">Пакет услуг <span class="cn-tag cn">参观套餐</span></p>
+      <h2>Что входит в «организацию посещения выставки»</h2>
+      <hr class="rule-gold">
+      <div class="geo-grid" style="margin-top:2rem">
+        <div class="geo-card hub">
+          <p class="geo-tag">01</p>
+          <p class="geo-name">Регистрация делегата</p>
+          <p class="geo-cn">登记</p>
+          <p class="geo-body">Сбор данных, подача в Оргкомитет, контроль статуса аккредитации и входных пакетов.</p>
+        </div>
+        <div class="geo-card">
+          <p class="geo-tag">02</p>
+          <p class="geo-name">Билеты и слоты</p>
+          <p class="geo-cn">门票</p>
+          <p class="geo-body">Оформление по правилам площадки: дни открытых встреч, VIP или отраслевые дни — по доступности.</p>
+        </div>
+        <div class="geo-card">
+          <p class="geo-tag">03</p>
+          <p class="geo-name">На площадке</p>
+          <p class="geo-cn">现场</p>
+          <p class="geo-body">Локальный координатор по согласованию: встречи, перевод, маршрут по экспозиции (не входит в базовый пакет без доп. приложения).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">FAQ <span class="cn-tag cn">问答</span></p>
+      <h2>Частые вопросы</h2>
+      <hr class="rule-gold">
+      <div class="about-text" style="margin-top:1.5rem;max-width:720px">
+        <p><strong>В какой валюте оплата?</strong><br>Чаще всего — <strong>RUB</strong>, <strong>KGS</strong>; возможны USD и CNY по договору. Условия фиксируем до выставления счёта.</p>
+        <p><strong>Электронный билет или пластик?</strong><br>Зависит от организатора: выдаём то, что принимает площадка, с передачей инструкции клиенту.</p>
+        <p><strong>Можно ли без выставки в списке?</strong><br>Да — опишите отрасль и город в <a href="#tickets-request">форме</a>, подберём релевантное событие и смету.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-slate" id="tickets-request">
+    <div class="container" style="max-width:640px">
+      <p class="eyebrow">Заявка <span class="cn-tag cn">提交</span></p>
+      <h2>Оставьте заявку</h2>
+      <hr class="rule-gold">
+      <p class="lead" style="margin-top:1rem;font-size:1rem">Менеджер уточнит даты, число делегатов и приложит ориентир по билетам и сервису.</p>
+      <form class="request-form" style="margin-top:1.5rem" action="https://formsubmit.co/wet4kg@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="ВЕСТ-ИСТ ТРЕЙД — билеты / делегат, заявка с сайта">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" id="ticket-inline-next" value="">
+        <label class="request-field">
+          <span class="request-label">Имя</span>
+          <input type="text" name="full_name" required autocomplete="name" placeholder="Иван Иванов">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@company.com">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Telegram / WhatsApp</span>
+          <input type="text" name="messenger" autocomplete="tel" placeholder="+996 …">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Компания</span>
+          <input type="text" name="company" required autocomplete="organization" placeholder="ОсОО «…»">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Выставка / город / число билетов</span>
+          <textarea name="message" required rows="5" placeholder="Например: Canton Fair, весна 2026, 2 делегата"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary request-submit">Отправить запрос</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer tickets-footer" id="contacts">
+  <div class="footer-intro">
+    <div class="container">
+      <p class="footer-intro-title">ВЕСТ-ИСТ ТРЕЙД</p>
+      <p class="footer-intro-text">
+        Выставки, билеты и делегаты — в модели единого оператора; документы и комплаенс по договору с Принципалом.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Компания</h4>
+        <p class="footer-brand">ОсОО «ВЕСТ-ИСТ ТРЕЙД»</p>
+        <p class="footer-cn cn">西东贸易</p>
+        <p class="footer-addr">
+          Кыргызская Республика<br>
+          г. Бишкек, Первомайский район, пр. Чынгыза Айтматова, д. 16<br>
+          ИНН 02711202310217
+        </p>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <p>
+          <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a><br>
+          <span class="footer-region">Бишкек · Китай и Азия — операции</span>
+        </p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/logistics/">Логистика</a></li>
+          <li><a href="/gpu-servers/">GPU-серверы</a></li>
+          <li><a href="/tickets/">Билеты</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-tagline footer-tagline-below">Информация на сайте не является публичной офертой.</p>
+    <div class="footer-bottom tickets-footer-bottom">
+      <span>&copy; <span id="year"></span> ОсОО «ВЕСТ-ИСТ ТРЕЙД», Кыргызская Республика.</span>
+      <span class="cn">西东贸易 · Единый оператор</span>
+    </div>
+  </div>
+</footer>
+
+<div class="request-modal tickets-modal" id="ticket-modal" hidden data-ticket-modal>
+  <button type="button" class="request-modal-backdrop" tabindex="-1" aria-label="Закрыть" data-close-ticket-modal></button>
+  <div class="request-modal-panel" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title">
+    <button type="button" class="request-modal-close" aria-label="Закрыть" data-close-ticket-modal>&times;</button>
+    <h2 id="ticket-modal-title" class="request-modal-title">Запрос на билеты</h2>
+    <p class="request-modal-lead" id="ticket-modal-lead">Укажите выставку, даты, количество билетов и контакт.</p>
+    <form class="request-form" action="https://formsubmit.co/wet4kg@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="ВЕСТ-ИСТ ТРЕЙД — билеты на выставку, запрос с сайта (модалка)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" id="ticket-form-next" value="">
+      <input type="hidden" name="event" id="ticket-form-event" value="">
+      <label class="request-field">
+        <span class="request-label">ФИО</span>
+        <input type="text" name="full_name" required autocomplete="name" placeholder="Иванов Иван Иванович">
+      </label>
+      <label class="request-field">
+        <span class="request-label">Email</span>
+        <input type="email" name="email" required autocomplete="email" placeholder="you@company.com">
+      </label>
+      <label class="request-field">
+        <span class="request-label">Компания</span>
+        <input type="text" name="company" required autocomplete="organization" placeholder="ООО «Пример»">
+      </label>
+      <label class="request-field">
+        <span class="request-label">Комментарий</span>
+        <textarea name="message" required rows="4" placeholder="Число делегатов, даты, язык сопровождения"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary request-submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  (function () {
+    var grid = document.getElementById('tickets-grid');
+    var empty = document.getElementById('tickets-empty');
+    var fc = document.getElementById('tickets-filter-city');
+    var ft = document.getElementById('tickets-filter-cat');
+    var inlineNext = document.getElementById('ticket-inline-next');
+    if (inlineNext) inlineNext.value = window.location.href.split('#')[0];
+
+    function applyFilters() {
+      var city = fc && fc.value;
+      var cat = ft && ft.value;
+      var n = 0;
+      grid.querySelectorAll('.tickets-card').forEach(function (card) {
+        var okCity = city === 'all' || card.getAttribute('data-city') === city;
+        var okCat = cat === 'all' || card.getAttribute('data-cat') === cat;
+        var show = okCity && okCat;
+        card.hidden = !show;
+        if (show) n++;
+      });
+      empty.hidden = n > 0;
+    }
+    if (fc) fc.addEventListener('change', applyFilters);
+    if (ft) ft.addEventListener('change', applyFilters);
+    applyFilters();
+
+    var modal = document.getElementById('ticket-modal');
+    var nextInput = document.getElementById('ticket-form-next');
+    var eventInput = document.getElementById('ticket-form-event');
+    var lead = document.getElementById('ticket-modal-lead');
+    if (nextInput) nextInput.value = window.location.href.split('#')[0];
+
+    function openModal(title) {
+      if (eventInput) eventInput.value = title || '';
+      if (lead) lead.textContent = title
+        ? 'Событие: ' + title + '. Укажите даты, число билетов и контакт в форме.'
+        : 'Укажите выставку, даты, количество билетов и контакт.';
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-open-ticket-modal]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        openModal(btn.getAttribute('data-event') || '');
+      });
+    });
+    modal.querySelectorAll('[data-close-ticket-modal]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+  })();
+</script>
+
+</body>
+</html>
