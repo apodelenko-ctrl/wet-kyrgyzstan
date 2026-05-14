@@ -1565,6 +1565,13 @@ a.svc-card--link:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
+.gpu-plans-grid .role-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.gpu-plans-grid .role-card > p.lead { font-size: 14px; color: var(--slate-700); margin: 0 0 12px; line-height: 1.55; }
+.gpu-plans-grid .role-card h3 { margin-top: 0; }
 .gpu-spec {
   margin: 4px 0 16px;
   padding: 12px 14px;
