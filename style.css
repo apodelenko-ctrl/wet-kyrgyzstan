@@ -1589,6 +1589,20 @@ a.svc-card--link:focus-visible {
   color: var(--navy);
   margin: 2px 0 4px;
 }
+.gpu-why-h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.35;
+}
+.gpu-plans-grid .gpu-price-note {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 6px 0 0;
+  opacity: 0.92;
+}
 .gpu-price-note { font-size: 12px; color: var(--slate-500); line-height: 1.4; }
 .gpu-price-label {
   font-size: 11px;
