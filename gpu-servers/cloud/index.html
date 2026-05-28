@@ -213,7 +213,7 @@
         <button type="button" class="gpu-cur-btn" data-cur="CNY">CNY ¥</button>
         <button type="button" class="gpu-cur-btn" data-cur="USDT">USDT</button>
       </div>
-      <p class="gpu-filter-hint"><span id="gpu-row-count">16</span> <span data-i18n="filter.skus">SKUs shown</span></p>
+      <p class="gpu-filter-hint"><span id="gpu-row-count">17</span> <span data-i18n="filter.skus">SKUs shown</span></p>
     </div>
 
     <div class="gpu-table-wrap">
@@ -261,37 +261,156 @@
         </dl>
       </div>
       <div class="gpu-region-map" aria-hidden="true">
-        <svg viewBox="0 0 480 280" role="img">
+        <svg viewBox="0 0 520 360" role="img" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="glowHK" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.55"/>
+              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.7"/>
               <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
             </radialGradient>
             <radialGradient id="glowSZ" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.55"/>
+              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.7"/>
               <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
             </radialGradient>
+            <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="0.7" fill="#1e293b"/>
+            </pattern>
           </defs>
-          <rect width="480" height="280" fill="#0b1220"/>
-          <g stroke="#1e293b" stroke-width="0.5" opacity="0.7">
-            <path d="M0 40 L480 40 M0 80 L480 80 M0 120 L480 120 M0 160 L480 160 M0 200 L480 200 M0 240 L480 240"/>
-            <path d="M40 0 L40 280 M80 0 L80 280 M120 0 L120 280 M160 0 L160 280 M200 0 L200 280 M240 0 L240 280 M280 0 L280 280 M320 0 L320 280 M360 0 L360 280 M400 0 L400 280 M440 0 L440 280"/>
+
+          <!-- Sea background -->
+          <rect width="520" height="360" fill="#0b1220"/>
+          <rect width="520" height="360" fill="url(#dots)"/>
+
+          <!-- Mainland China (Guangdong coast) -->
+          <path d="M 0 0 L 520 0 L 520 110
+                   C 480 115, 450 100, 420 105
+                   C 390 110, 370 130, 360 145
+                   C 350 160, 345 170, 340 178
+                   L 335 175 L 332 170
+                   C 328 158, 320 150, 308 145
+                   C 295 142, 285 148, 282 158
+                   L 280 168
+                   C 280 175, 282 182, 285 188
+                   C 282 188, 278 185, 272 183
+                   C 260 180, 248 178, 240 172
+                   C 232 168, 228 158, 226 150
+                   C 224 142, 222 132, 218 124
+                   C 214 116, 206 108, 196 102
+                   C 184 96, 170 95, 156 99
+                   C 142 103, 128 112, 116 118
+                   C 102 124, 88 130, 76 134
+                   C 64 138, 50 140, 36 142
+                   C 24 144, 12 145, 0 142
+                   Z"
+                fill="#1a2436" stroke="#2c3a52" stroke-width="1"/>
+
+          <!-- Hong Kong New Territories + Kowloon (peninsula south of border) -->
+          <path d="M 285 188
+                   C 290 195, 298 200, 306 202
+                   C 314 204, 322 202, 328 198
+                   C 334 195, 338 188, 342 182
+                   C 346 178, 352 176, 358 178
+                   C 364 180, 370 184, 374 190
+                   C 378 196, 380 204, 378 212
+                   C 376 220, 370 226, 362 230
+                   C 354 232, 346 232, 340 228
+                   C 334 226, 330 220, 326 216
+                   L 320 218
+                   C 314 222, 308 224, 302 222
+                   C 296 220, 290 215, 287 208
+                   C 285 200, 284 194, 285 188 Z"
+                fill="#1f2b40" stroke="#324363" stroke-width="1"/>
+
+          <!-- Hong Kong Island (south of Kowloon, across Victoria Harbour) -->
+          <path d="M 320 238
+                   C 326 236, 334 235, 342 237
+                   C 350 239, 358 244, 364 250
+                   C 370 256, 372 264, 368 270
+                   C 364 274, 356 274, 348 272
+                   C 340 270, 332 266, 326 260
+                   C 320 254, 318 246, 320 238 Z"
+                fill="#1f2b40" stroke="#324363" stroke-width="1"/>
+
+          <!-- Lantau Island (west of HK Island) -->
+          <path d="M 268 232
+                   C 276 230, 286 232, 292 238
+                   C 296 244, 296 252, 290 258
+                   C 282 264, 270 264, 262 260
+                   C 256 256, 254 248, 258 240
+                   C 261 236, 264 234, 268 232 Z"
+                fill="#1f2b40" stroke="#324363" stroke-width="1"/>
+
+          <!-- Macau (small, west side of estuary) -->
+          <circle cx="200" cy="225" r="4" fill="#1f2b40" stroke="#324363" stroke-width="0.8"/>
+
+          <!-- HK/Mainland border dashed line -->
+          <path d="M 282 188 C 296 184, 310 184, 326 190 C 340 195, 354 198, 370 196"
+                stroke="#475569" stroke-width="0.8" stroke-dasharray="3,3" fill="none" opacity="0.7"/>
+
+          <!-- Pearl River Estuary label -->
+          <text x="180" y="180" fill="#475569" font-family="Inter,sans-serif" font-size="10"
+                font-style="italic" letter-spacing="0.05em">Pearl River Estuary</text>
+
+          <!-- South China Sea label -->
+          <text x="430" y="320" fill="#334155" font-family="Inter,sans-serif" font-size="11"
+                letter-spacing="0.1em" text-anchor="end">SOUTH CHINA SEA</text>
+
+          <!-- Compass -->
+          <g transform="translate(40, 40)">
+            <circle r="14" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M 0 -10 L 3 0 L 0 10 L -3 0 Z" fill="#22d3ee"/>
+            <text x="0" y="-18" fill="#94a3b8" font-family="Inter,sans-serif"
+                  font-size="9" text-anchor="middle" font-weight="700">N</text>
           </g>
-          <path d="M40 90 Q 120 60 200 80 T 360 90 L 380 130 Q 360 170 320 180 L 280 200 Q 240 220 200 210 L 160 200 Q 100 200 70 170 Q 40 140 40 90 Z"
-                fill="#1e293b" stroke="#334155" stroke-width="1"/>
-          <path d="M260 150 Q 290 140 320 160 L 340 200 Q 320 230 280 235 L 250 220 Q 240 190 260 150 Z"
-                fill="#1f2937" stroke="#334155" stroke-width="1"/>
-          <circle cx="330" cy="175" r="36" fill="url(#glowHK)"/>
-          <circle cx="330" cy="175" r="5" fill="#22d3ee"/>
-          <text x="340" y="172" fill="#67e8f9" font-family="Inter,sans-serif" font-size="11" font-weight="700">HK · Tseung Kwan O</text>
-          <text x="340" y="186" fill="#94a3b8" font-family="JetBrains Mono,monospace" font-size="9">22.32°N · 114.27°E</text>
-          <circle cx="305" cy="160" r="30" fill="url(#glowSZ)"/>
-          <circle cx="305" cy="160" r="5" fill="#60a5fa"/>
-          <text x="180" y="158" fill="#93c5fd" font-family="Inter,sans-serif" font-size="11" font-weight="700" text-anchor="end">SZ · Futian</text>
-          <text x="180" y="172" fill="#94a3b8" font-family="JetBrains Mono,monospace" font-size="9" text-anchor="end">22.54°N · 114.06°E</text>
-          <path d="M180 158 L 295 160" stroke="#475569" stroke-width="1" stroke-dasharray="2,3"/>
-          <path d="M305 160 L 330 175" stroke="#22d3ee" stroke-width="1.5"/>
-          <text x="318" y="158" fill="#cbd5e1" font-family="JetBrains Mono,monospace" font-size="8">&lt; 2 ms</text>
+
+          <!-- Scale bar -->
+          <g transform="translate(40, 320)">
+            <line x1="0" y1="0" x2="60" y2="0" stroke="#475569" stroke-width="1.5"/>
+            <line x1="0" y1="-3" x2="0" y2="3" stroke="#475569" stroke-width="1.5"/>
+            <line x1="30" y1="-3" x2="30" y2="3" stroke="#475569" stroke-width="1.5"/>
+            <line x1="60" y1="-3" x2="60" y2="3" stroke="#475569" stroke-width="1.5"/>
+            <text x="30" y="-7" fill="#94a3b8" font-family="JetBrains Mono,monospace"
+                  font-size="9" text-anchor="middle">25 km</text>
+          </g>
+
+          <!-- Connection between SZ and HK -->
+          <path d="M 320 162 Q 335 175 348 195" stroke="#22d3ee" stroke-width="1.6"
+                fill="none" stroke-dasharray="0" opacity="0.85"/>
+          <circle cx="333" cy="178" r="2" fill="#22d3ee">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Shenzhen marker (Futian district, north of border) -->
+          <circle cx="320" cy="162" r="28" fill="url(#glowSZ)"/>
+          <circle cx="320" cy="162" r="6" fill="#0b1220" stroke="#60a5fa" stroke-width="2"/>
+          <circle cx="320" cy="162" r="2.5" fill="#60a5fa"/>
+          <line x1="320" y1="162" x2="380" y2="115" stroke="#60a5fa" stroke-width="0.8" opacity="0.6"/>
+          <g transform="translate(385, 110)">
+            <rect x="-2" y="-13" width="120" height="30" rx="3" fill="#0b1220" stroke="#1e3a8a" stroke-width="0.8"/>
+            <text x="6" y="-2" fill="#93c5fd" font-family="Inter,sans-serif"
+                  font-size="11" font-weight="700">SZ · Futian</text>
+            <text x="6" y="11" fill="#64748b" font-family="JetBrains Mono,monospace"
+                  font-size="8.5">22.54°N · 114.06°E</text>
+          </g>
+
+          <!-- HK marker (Tseung Kwan O, east of HK Island area) -->
+          <circle cx="348" cy="200" r="32" fill="url(#glowHK)"/>
+          <circle cx="348" cy="200" r="6" fill="#0b1220" stroke="#22d3ee" stroke-width="2"/>
+          <circle cx="348" cy="200" r="2.5" fill="#22d3ee"/>
+          <line x1="348" y1="200" x2="420" y2="260" stroke="#22d3ee" stroke-width="0.8" opacity="0.6"/>
+          <g transform="translate(425, 255)">
+            <rect x="-2" y="-13" width="92" height="30" rx="3" fill="#0b1220" stroke="#155e75" stroke-width="0.8"/>
+            <text x="6" y="-2" fill="#67e8f9" font-family="Inter,sans-serif"
+                  font-size="11" font-weight="700">HK · TKO</text>
+            <text x="6" y="11" fill="#64748b" font-family="JetBrains Mono,monospace"
+                  font-size="8.5">22.32°N · 114.27°E</text>
+          </g>
+
+          <!-- Latency badge on link -->
+          <g transform="translate(355, 178)">
+            <rect x="-2" y="-9" width="46" height="16" rx="8" fill="#0b1220" stroke="#22d3ee" stroke-width="1"/>
+            <text x="21" y="2" fill="#67e8f9" font-family="JetBrains Mono,monospace"
+                  font-size="9" font-weight="700" text-anchor="middle">&lt; 2 ms</text>
+          </g>
         </svg>
       </div>
       <div class="gpu-region-card">
