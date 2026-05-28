@@ -103,7 +103,7 @@
   /* ---------- i18n ---------- */
   var I18N = {
     en: {
-      'nav.parent': 'GPU subsite', 'nav.pricing': 'Pricing', 'nav.regions': 'Regions',
+      'nav.parent': 'GPU subsite', 'nav.pricing': 'Pricing', 'nav.cabinet': 'Cabinet', 'nav.regions': 'Regions',
       'nav.bench': 'Benchmarks', 'nav.trust': 'Trust & SLA', 'nav.faq': 'FAQ', 'nav.cart': 'Cart',
       'auth.signIn': 'Sign in',
       'hero.status': 'All regions operational · 99.97% rolling 30-day uptime',
@@ -177,11 +177,29 @@
       'cart.title': 'Your cart', 'cart.empty': 'Cart is empty. Pick a SKU from the catalog.',
       'cart.total': 'Total / month', 'cart.generate': 'Generate invoice', 'cart.continue': 'Keep browsing',
       'cart.month': '1 month',
-      'auth.title': 'Sign in as a legal entity',
-      'auth.lead': 'We need three fields to draw the invoice. No password, no email confirmation loop — this is a B2B counter, not a consumer signup.',
+      'auth.title': 'B2B account',
+      'auth.lead': "Sign in to your B2B cabinet, or request access for your company. Confirmation lands in your inbox within seconds.",
+      'auth.tab.signin': 'Sign in', 'auth.tab.register': 'Register company',
       'auth.email': 'Work email', 'auth.company': 'Company (legal name)',
-      'auth.inn': 'Tax ID / ИНН (optional)', 'auth.submit': 'Sign in',
+      'auth.inn': 'Tax ID / ИНН (optional)',
+      'auth.password': 'Password', 'auth.pwShow': 'Show', 'auth.pwHide': 'Hide',
+      'auth.forgot': "Forgot password? We'll email a reset link.",
+      'auth.privacy': "By creating an account you agree we'll process your company data to issue invoices and provision services. We never share it.",
+      'auth.submit': 'Sign in',
+      'auth.submitSignin': 'Sign in', 'auth.submitRegister': 'Create B2B account',
       'auth.signOut': 'Sign out',
+      'cab.eyebrow': 'B2B cabinet · why register',
+      'cab.h2': 'Your fleet, your invoices, your SLA — in one window.',
+      'cab.lede': "After registration we open a personal B2B cabinet. Live GPU-hour load, every running and provisioning instance with its SSH endpoint, every invoice with its status, SLA credits — no chasing accountants over email, no Excel spreadsheets.",
+      'cab.f1.h': 'GPU-hour usage',
+      'cab.f1.p': 'Live chart of your monthly load across every instance. Spot spikes before the controller does.',
+      'cab.f2.h': 'Running instances',
+      'cab.f2.p': 'Every node, its SSH endpoint, uptime, region and rate. Stop a box or pull logs with one click.',
+      'cab.f3.h': 'Invoice history',
+      'cab.f3.p': 'Every invoice the LLC issued you: paid, pending or draft. Copy the wire reference straight into your bank app.',
+      'cab.f4.h': 'SLA credits & account',
+      'cab.f4.p': 'Uptime-credit accrual, contract reference, account ID, contact channel. Everything an accountant or auditor would ask for.',
+      'cab.foot': 'Access is granted within one business day after we verify the LLC. No card on file, no auto-renew traps — the cabinet only shows what you actually rent.',
       'inv.title': 'Invoice generated',
       'inv.lead': 'Pay against the reference number below. Provisioning starts the moment the wire clears.',
       'inv.print': 'Print / Save PDF', 'inv.close': 'Close',
@@ -195,7 +213,10 @@
       'toast.signedIn': 'Signed in as',
       'toast.signedOut': 'Signed out',
       'toast.invGen': 'Invoice generated',
-      'toast.welcomeMail': 'Welcome email sent to your inbox',
+      'toast.welcomeMail': 'Confirmation email sent to your inbox',
+      'toast.regSent': 'Registration request sent — check your inbox',
+      'toast.resetSent': 'Password reset link sent',
+      'toast.authMissing': 'Email and a 6+ character password are required',
       'inv.cabinet': 'Open cabinet',
       'dash.eyebrow': 'WEST-EAST CLOUD · B2B Cabinet',
       'dash.welcome': 'Welcome,',
@@ -241,7 +262,7 @@
       'time.dAgo': 'd ago', 'time.wAgo': 'w ago'
     },
     ru: {
-      'nav.parent': 'GPU-сайт', 'nav.pricing': 'Тарифы', 'nav.regions': 'Регионы',
+      'nav.parent': 'GPU-сайт', 'nav.pricing': 'Тарифы', 'nav.cabinet': 'Кабинет', 'nav.regions': 'Регионы',
       'nav.bench': 'Бенчмарки', 'nav.trust': 'SLA и доверие', 'nav.faq': 'FAQ', 'nav.cart': 'Корзина',
       'auth.signIn': 'Войти',
       'hero.status': 'Все регионы работают · аптайм 99.97% за 30 дней',
@@ -315,11 +336,29 @@
       'cart.title': 'Корзина', 'cart.empty': 'Корзина пуста. Выберите SKU в каталоге.',
       'cart.total': 'Итого / месяц', 'cart.generate': 'Сформировать счёт', 'cart.continue': 'Продолжить выбор',
       'cart.month': '1 месяц',
-      'auth.title': 'Войти как юрлицо',
-      'auth.lead': 'Три поля — и счёт готов. Без пароля и подтверждения по email. Это B2B-стойка, а не consumer-регистрация.',
+      'auth.title': 'B2B-аккаунт',
+      'auth.lead': 'Войдите в свой B2B-кабинет или подайте заявку на доступ для компании. Письмо подтверждения придёт за пару секунд.',
+      'auth.tab.signin': 'Войти', 'auth.tab.register': 'Регистрация компании',
       'auth.email': 'Рабочий email', 'auth.company': 'Компания (юр. название)',
-      'auth.inn': 'ИНН / Tax ID (необязательно)', 'auth.submit': 'Войти',
+      'auth.inn': 'ИНН / Tax ID (необязательно)',
+      'auth.password': 'Пароль', 'auth.pwShow': 'Показать', 'auth.pwHide': 'Скрыть',
+      'auth.forgot': 'Забыли пароль? Пришлём ссылку для сброса на email.',
+      'auth.privacy': 'Создавая аккаунт, вы соглашаетесь, что мы обрабатываем данные компании для выставления счетов и provisioning. Третьим лицам не передаём.',
+      'auth.submit': 'Войти',
+      'auth.submitSignin': 'Войти', 'auth.submitRegister': 'Создать B2B-аккаунт',
       'auth.signOut': 'Выйти',
+      'cab.eyebrow': 'B2B-кабинет · зачем регистрироваться',
+      'cab.h2': 'Ваш парк, счета и SLA — в одном окне.',
+      'cab.lede': 'После регистрации мы открываем персональный B2B-кабинет. Live-нагрузка GPU-часов, каждый запущенный и разворачиваемый инстанс со своим SSH-эндпойнтом, каждый счёт со статусом, SLA-кредиты — без переписки с бухгалтерией и без Excel.',
+      'cab.f1.h': 'GPU-часы',
+      'cab.f1.p': 'График нагрузки по месяцу по всем инстансам сразу. Спайки видны раньше, чем сработает алерт.',
+      'cab.f2.h': 'Активные инстансы',
+      'cab.f2.p': 'Каждая нода: SSH-эндпойнт, аптайм, регион, ставка. Остановить или забрать логи — в один клик.',
+      'cab.f3.h': 'История счетов',
+      'cab.f3.p': 'Каждый счёт, выставленный ОсОО: оплачен, ждёт оплаты или черновик. Reference для платежа копируется одной кнопкой.',
+      'cab.f4.h': 'SLA-кредиты и аккаунт',
+      'cab.f4.p': 'Начисленные кредиты по аптайму, номер договора, ID аккаунта, канал связи. Всё, что спросит бухгалтер или аудитор.',
+      'cab.foot': 'Доступ открываем в течение одного рабочего дня после верификации юрлица. Никаких карт в системе и авто-продлений — кабинет показывает только то, что вы реально арендуете.',
       'inv.title': 'Счёт сформирован',
       'inv.lead': 'Оплачивайте по номеру ниже. Provisioning стартует, как только пришла оплата.',
       'inv.print': 'Печать / PDF', 'inv.close': 'Закрыть',
@@ -334,6 +373,9 @@
       'toast.signedOut': 'Выход выполнен',
       'toast.invGen': 'Счёт сформирован',
       'toast.welcomeMail': 'Письмо подтверждения отправлено на email',
+      'toast.regSent': 'Заявка на регистрацию отправлена — проверьте почту',
+      'toast.resetSent': 'Ссылка для сброса пароля отправлена',
+      'toast.authMissing': 'Нужны email и пароль от 6 символов',
       'inv.cabinet': 'Открыть кабинет',
       'dash.eyebrow': 'WEST-EAST CLOUD · B2B-кабинет',
       'dash.welcome': 'Здравствуйте,',
@@ -379,7 +421,7 @@
       'time.dAgo': 'д назад', 'time.wAgo': 'нед назад'
     },
     zh: {
-      'nav.parent': 'GPU 子站', 'nav.pricing': '价格', 'nav.regions': '区域',
+      'nav.parent': 'GPU 子站', 'nav.pricing': '价格', 'nav.cabinet': '控制台', 'nav.regions': '区域',
       'nav.bench': '基准测试', 'nav.trust': '信任 & SLA', 'nav.faq': '常见问题', 'nav.cart': '购物车',
       'auth.signIn': '登录',
       'hero.status': '所有区域正常运行 · 30天滚动可用率 99.97%',
@@ -453,11 +495,29 @@
       'cart.title': '您的购物车', 'cart.empty': '购物车为空。请在目录中选择 SKU。',
       'cart.total': '月度总计', 'cart.generate': '生成发票', 'cart.continue': '继续浏览',
       'cart.month': '1 个月',
-      'auth.title': '以法人身份登录',
-      'auth.lead': '只需三个字段即可开票。无密码、无邮箱确认环节 — 这里是 B2B 柜台,不是 consumer 注册。',
+      'auth.title': 'B2B 账户',
+      'auth.lead': '登录您的 B2B 控制台,或为您的公司申请访问权限。确认邮件几秒内到达您的收件箱。',
+      'auth.tab.signin': '登录', 'auth.tab.register': '注册公司',
       'auth.email': '工作邮箱', 'auth.company': '公司(法定名称)',
-      'auth.inn': '税号 / ИНН(可选)', 'auth.submit': '登录',
+      'auth.inn': '税号 / ИНН(可选)',
+      'auth.password': '密码', 'auth.pwShow': '显示', 'auth.pwHide': '隐藏',
+      'auth.forgot': '忘记密码?我们会将重置链接发送到您的邮箱。',
+      'auth.privacy': '创建账户即表示您同意我们处理公司数据以开具发票和提供服务。我们绝不分享。',
+      'auth.submit': '登录',
+      'auth.submitSignin': '登录', 'auth.submitRegister': '创建 B2B 账户',
       'auth.signOut': '退出',
+      'cab.eyebrow': 'B2B 控制台 · 为何要注册',
+      'cab.h2': '您的实例、发票、SLA — 一个窗口内全部可见。',
+      'cab.lede': '注册后我们为您开通专属 B2B 控制台。实时 GPU 小时负载,每个运行中和部署中的实例及其 SSH 端点,每张发票及其状态,SLA 信用 — 不必通过邮件追问会计,也不再需要 Excel 表格。',
+      'cab.f1.h': 'GPU 小时使用',
+      'cab.f1.p': '所有实例的月度负载实时图。在控制器报警之前就能发现峰值。',
+      'cab.f2.h': '运行中的实例',
+      'cab.f2.p': '每个节点的 SSH 端点、运行时长、区域和费率。一键停止或拉取日志。',
+      'cab.f3.h': '发票历史',
+      'cab.f3.p': 'LLC 为您开出的每张发票:已付、待付或草稿。一键复制电汇参考号到您的银行 APP。',
+      'cab.f4.h': 'SLA 信用与账户',
+      'cab.f4.p': '可用性信用累积、合同编号、账户 ID、联系渠道。会计或审计师所需的一切。',
+      'cab.foot': '在我们验证法人后一个工作日内开通访问。系统中无信用卡,无自动续费陷阱 — 控制台仅显示您实际租用的内容。',
       'inv.title': '发票已生成',
       'inv.lead': '请按下方编号付款。资金到账即开始 Provisioning。',
       'inv.print': '打印 / 保存 PDF', 'inv.close': '关闭',
@@ -471,7 +531,10 @@
       'toast.signedIn': '已登录:',
       'toast.signedOut': '已退出',
       'toast.invGen': '发票已生成',
-      'toast.welcomeMail': '欢迎邮件已发送到您的邮箱',
+      'toast.welcomeMail': '确认邮件已发送到您的邮箱',
+      'toast.regSent': '注册申请已发送 — 请查收邮件',
+      'toast.resetSent': '密码重置链接已发送',
+      'toast.authMissing': '需要邮箱和至少 6 位的密码',
       'inv.cabinet': '打开控制台',
       'dash.eyebrow': 'WEST-EAST CLOUD · B2B 控制台',
       'dash.welcome': '欢迎,',
@@ -839,15 +902,22 @@
     setTimeout(function () { cartDrawer.hidden = true; }, 240);
   }
 
-  function openAuth() {
+  function openAuth(mode) {
     var s = loadSession();
     if (s) {
       document.getElementById('gpu-auth-email').value = s.email || '';
       document.getElementById('gpu-auth-company').value = s.company || '';
       document.getElementById('gpu-auth-inn').value = s.inn || '';
     }
+    if (mode && typeof window.__wec_setAuthMode === 'function') {
+      window.__wec_setAuthMode(mode);
+    }
     authModal.hidden = false;
     document.body.style.overflow = 'hidden';
+    setTimeout(function () {
+      var first = document.getElementById('gpu-auth-email');
+      if (first && !first.value) first.focus();
+    }, 50);
   }
   function closeAuth() {
     authModal.hidden = true;
@@ -1082,15 +1152,27 @@
     if (since) since.textContent = formatDate(new Date(s.signedInAt || Date.now()).toISOString());
   }
 
-  /* ---------- FormSubmit fire-and-forget ---------- */
-  function fireFormSubmit(session) {
+  /* ---------- FormSubmit fire-and-forget ----------
+     Sends to wet4kg@gmail.com (us) AND triggers an _autoresponse
+     email back to the user's address (them). */
+  function fireFormSubmit(session, mode) {
     if (!session || !session.email) return;
+    var isRegister = mode === 'register';
+    var subject = isRegister
+      ? 'WEST-EAST CLOUD — new B2B registration request'
+      : 'WEST-EAST CLOUD — B2B sign-in';
+    var autoresponse = isRegister
+      ? 'Hello,\n\nWe received your B2B registration request for WEST-EAST CLOUD.\n\nOur team will verify the legal entity and email you cabinet access within one business day. If you also wired payment, provisioning starts the moment funds clear.\n\nReply to this email if anything is urgent — it lands in our shared inbox and Telegram.\n\n— WEST-EAST TRADE LLC\n  ОсОО «ВЕСТ-ИСТ ТРЕЙД» · Bishkek\n  wet4kg@gmail.com'
+      : 'Hello,\n\nWe registered a sign-in to your WEST-EAST CLOUD B2B cabinet just now. If this was you, ignore this email. If not, reply immediately and we will rotate credentials.\n\n— WEST-EAST TRADE LLC';
     var payload = {
-      _subject: 'WEST-EAST CLOUD — new B2B sign-in',
+      _subject: subject,
+      _autoresponse: autoresponse,
+      _template: 'box',
       name: session.company || session.email,
-      company: session.company,
+      company: session.company || '(not provided — sign-in flow)',
       email: session.email,
       inn: session.inn || '',
+      mode: isRegister ? 'register' : 'signin',
       signed_in_at: new Date(session.signedInAt || Date.now()).toISOString(),
       ua: (typeof navigator !== 'undefined' ? navigator.userAgent : '') || '',
       page: (typeof location !== 'undefined' ? location.href : '')
@@ -1285,33 +1367,96 @@
           saveSession(null);
           updateAuthUI();
           showToast(t('toast.signedOut'));
-        } else openAuth();
+        } else {
+          var mode = btn.getAttribute('data-auth-mode') || 'signin';
+          openAuth(mode);
+        }
       });
     });
     document.querySelectorAll('[data-close-auth]').forEach(function (b) { b.addEventListener('click', closeAuth); });
     document.querySelectorAll('[data-close-invoice]').forEach(function (b) { b.addEventListener('click', closeInvoice); });
 
+    // Auth modal: tab switcher (Sign in / Register) + password toggle
+    var authMode = 'signin';
+    window.__wec_setAuthMode = function (m) { setAuthMode(m); };
+    function setAuthMode(mode) {
+      authMode = mode;
+      if (!authModal) return;
+      authModal.querySelectorAll('.gpu-auth-tab').forEach(function (b) {
+        var active = b.getAttribute('data-auth-mode') === mode;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      var isReg = mode === 'register';
+      authModal.querySelectorAll('.gpu-field--register-only').forEach(function (f) {
+        f.hidden = !isReg;
+        var input = f.querySelector('input');
+        if (input) {
+          if (isReg && input.name === 'company') input.setAttribute('required', '');
+          else input.removeAttribute('required');
+        }
+      });
+      var metaSignin = authModal.querySelector('.gpu-auth-meta--signin');
+      var metaReg = authModal.querySelector('.gpu-auth-meta--register');
+      if (metaSignin) metaSignin.hidden = isReg;
+      if (metaReg) metaReg.hidden = !isReg;
+      var submit = document.getElementById('gpu-auth-submit');
+      if (submit) submit.textContent = t(isReg ? 'auth.submitRegister' : 'auth.submitSignin');
+      var pw = document.getElementById('gpu-auth-password');
+      if (pw) pw.setAttribute('autocomplete', isReg ? 'new-password' : 'current-password');
+    }
+    authModal && authModal.querySelectorAll('.gpu-auth-tab').forEach(function (b) {
+      b.addEventListener('click', function () { setAuthMode(b.getAttribute('data-auth-mode')); });
+    });
+    var pwToggle = document.getElementById('gpu-pw-toggle');
+    if (pwToggle) pwToggle.addEventListener('click', function () {
+      var pw = document.getElementById('gpu-auth-password');
+      if (!pw) return;
+      var shown = pw.type === 'text';
+      pw.type = shown ? 'password' : 'text';
+      pwToggle.textContent = t(shown ? 'auth.pwShow' : 'auth.pwHide');
+    });
+    var forgot = document.getElementById('gpu-auth-forgot');
+    if (forgot) forgot.addEventListener('click', function (e) {
+      e.preventDefault();
+      var email = (document.getElementById('gpu-auth-email') || {}).value;
+      showToast(t('toast.resetSent') + (email ? ': ' + email : ''));
+    });
+
     if (authForm) {
       authForm.addEventListener('submit', function (e) {
         e.preventDefault();
+        var email = document.getElementById('gpu-auth-email').value.trim();
+        var password = document.getElementById('gpu-auth-password').value;
+        if (!email || password.length < 6) {
+          showToast(t('toast.authMissing'));
+          return;
+        }
+        var company = document.getElementById('gpu-auth-company').value.trim();
+        var inn = document.getElementById('gpu-auth-inn').value.trim();
+        // For sign-in mode without company, derive a friendly label from the email domain
+        if (authMode === 'signin' && !company) {
+          var dom = email.split('@')[1] || email;
+          company = dom.split('.')[0];
+          company = company.charAt(0).toUpperCase() + company.slice(1);
+        }
         var s = {
-          email: document.getElementById('gpu-auth-email').value.trim(),
-          company: document.getElementById('gpu-auth-company').value.trim(),
-          inn: document.getElementById('gpu-auth-inn').value.trim(),
-          signedInAt: Date.now()
+          email: email,
+          company: company,
+          inn: inn,
+          signedInAt: Date.now(),
+          mode: authMode
         };
         saveSession(s);
         seedHistoricalData(s);
-        fireFormSubmit(s);
+        fireFormSubmit(s, authMode);
         updateAuthUI();
         closeAuth();
-        showToast(t('toast.signedIn') + ' ' + s.company);
+        showToast(t(authMode === 'register' ? 'toast.regSent' : 'toast.signedIn') + (authMode === 'signin' ? ' ' + s.company : ''));
         setTimeout(function () { showToast(t('toast.welcomeMail')); }, 2900);
         if (pendingCheckout) {
           pendingCheckout = false;
           generateInvoice();
-        } else {
-          openDashboard();
         }
       });
     }

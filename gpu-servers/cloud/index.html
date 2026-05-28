@@ -32,6 +32,7 @@
     <nav class="gpu-nav" id="gpu-nav" aria-label="WEST-EAST CLOUD">
       <a href="../" data-i18n="nav.parent">GPU subsite</a>
       <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="#cabinet" data-i18n="nav.cabinet">Cabinet</a>
       <a href="#regions" data-i18n="nav.regions">Regions</a>
       <a href="#bench" data-i18n="nav.bench">Benchmarks</a>
       <a href="#trust" data-i18n="nav.trust">Trust &amp; SLA</a>
@@ -77,7 +78,7 @@
           <span data-i18n="hero.ctaPrimary">Browse the catalog</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <button type="button" class="gpu-btn gpu-btn-ghost gpu-btn-lg" data-open-auth data-i18n="hero.ctaSecondary">Open B2B account</button>
+        <button type="button" class="gpu-btn gpu-btn-ghost gpu-btn-lg" data-open-auth data-auth-mode="register" data-i18n="hero.ctaSecondary">Open B2B account</button>
       </div>
       <p class="gpu-hero-pay">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 10h20" stroke="currentColor" stroke-width="1.6"/><path d="M6 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -152,6 +153,61 @@
         <figcaption><span class="gpu-mono">HGX 8× SXM5</span> · <span data-i18n="why.caption">our reference platform for H100 / H200 nodes</span></figcaption>
       </figure>
     </div>
+  </div>
+</section>
+
+<section class="gpu-section gpu-section--cabinet" id="cabinet">
+  <div class="gpu-wrap">
+    <div class="gpu-cabinet-head">
+      <p class="gpu-eyebrow" data-i18n="cab.eyebrow">B2B cabinet · why register</p>
+      <h2 data-i18n="cab.h2">Your fleet, your invoices, your SLA — in one window.</h2>
+      <p class="gpu-lede" data-i18n="cab.lede">After registration we open a personal B2B cabinet. Live GPU-hour load, every running and provisioning instance with its SSH endpoint, every invoice with its status, SLA credits — no chasing accountants over email, no Excel spreadsheets.</p>
+    </div>
+
+    <div class="gpu-cabinet-shot">
+      <div class="gpu-cabinet-frame">
+        <div class="gpu-cabinet-bar" aria-hidden="true">
+          <span class="gpu-cabinet-dot gpu-cabinet-dot--r"></span>
+          <span class="gpu-cabinet-dot gpu-cabinet-dot--y"></span>
+          <span class="gpu-cabinet-dot gpu-cabinet-dot--g"></span>
+          <span class="gpu-cabinet-url">cabinet.wet-east.cloud</span>
+        </div>
+        <img src="img/cabinet-preview.png" alt="WEST-EAST CLOUD B2B cabinet preview" loading="lazy">
+      </div>
+    </div>
+
+    <ul class="gpu-cabinet-feat">
+      <li>
+        <span class="gpu-cabinet-feat-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12l3-3 4 4 5-7 6 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3 data-i18n="cab.f1.h">GPU-hour usage</h3>
+        <p data-i18n="cab.f1.p">Live chart of your monthly load across every instance. Spot spikes before the controller does.</p>
+      </li>
+      <li>
+        <span class="gpu-cabinet-feat-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="7" cy="17" r="1" fill="currentColor"/></svg>
+        </span>
+        <h3 data-i18n="cab.f2.h">Running instances</h3>
+        <p data-i18n="cab.f2.p">Every node, its SSH endpoint, uptime, region and rate. Stop a box or pull logs with one click.</p>
+      </li>
+      <li>
+        <span class="gpu-cabinet-feat-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 13h7M9 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3 data-i18n="cab.f3.h">Invoice history</h3>
+        <p data-i18n="cab.f3.p">Every счёт the LLC issued you: paid, pending or draft. Copy the wire reference straight into your bank app.</p>
+      </li>
+      <li>
+        <span class="gpu-cabinet-feat-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.5-3 8.5-8 9-5-.5-8-4.5-8-9V7l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 data-i18n="cab.f4.h">SLA credits &amp; account</h3>
+        <p data-i18n="cab.f4.p">Uptime-credit accrual, contract reference, account ID, contact channel. Everything an accountant or auditor would ask for.</p>
+      </li>
+    </ul>
+
+    <p class="gpu-cabinet-foot" data-i18n="cab.foot">Access is granted within one business day after we verify the LLC. No card on file, no auto-renew traps — the cabinet only shows what you actually rent.</p>
   </div>
 </section>
 
@@ -676,22 +732,46 @@
   <button type="button" class="gpu-modal-backdrop" tabindex="-1" aria-label="Close" data-close-auth></button>
   <div class="gpu-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gpu-auth-title">
     <button type="button" class="gpu-modal-close" aria-label="Close" data-close-auth>&times;</button>
-    <h2 id="gpu-auth-title" data-i18n="auth.title">Sign in as a legal entity</h2>
-    <p class="gpu-modal-lead" data-i18n="auth.lead">We need three fields to draw the invoice. No password, no email confirmation loop — this is a B2B counter, not a consumer signup.</p>
-    <form class="gpu-form" id="gpu-auth-form">
+    <h2 id="gpu-auth-title" data-i18n="auth.title">B2B account</h2>
+    <p class="gpu-modal-lead" data-i18n="auth.lead">Sign in to your B2B cabinet, or request access for your company. Confirmation lands in your inbox within seconds.</p>
+
+    <div class="gpu-auth-tabs" role="tablist">
+      <button type="button" class="gpu-auth-tab is-active" data-auth-mode="signin" role="tab" aria-selected="true" data-i18n="auth.tab.signin">Sign in</button>
+      <button type="button" class="gpu-auth-tab" data-auth-mode="register" role="tab" aria-selected="false" data-i18n="auth.tab.register">Register company</button>
+    </div>
+
+    <form class="gpu-form" id="gpu-auth-form" autocomplete="on">
       <label class="gpu-field">
         <span data-i18n="auth.email">Work email</span>
         <input type="email" name="email" id="gpu-auth-email" required autocomplete="email" placeholder="you@company.com">
       </label>
-      <label class="gpu-field">
+
+      <label class="gpu-field gpu-field--register-only" hidden>
         <span data-i18n="auth.company">Company (legal name)</span>
-        <input type="text" name="company" id="gpu-auth-company" required autocomplete="organization" placeholder="ООО / ОсОО / ТОО …">
+        <input type="text" name="company" id="gpu-auth-company" autocomplete="organization" placeholder="ООО / ОсОО / ТОО …">
       </label>
-      <label class="gpu-field">
+
+      <label class="gpu-field gpu-field--register-only" hidden>
         <span data-i18n="auth.inn">Tax ID / ИНН (optional)</span>
         <input type="text" name="inn" id="gpu-auth-inn" placeholder="02711202310217">
       </label>
-      <button type="submit" class="gpu-btn gpu-btn-primary" style="width:100%" data-i18n="auth.submit">Sign in</button>
+
+      <label class="gpu-field">
+        <span class="gpu-field-row">
+          <span data-i18n="auth.password">Password</span>
+          <button type="button" class="gpu-field-toggle" id="gpu-pw-toggle" data-i18n="auth.pwShow">Show</button>
+        </span>
+        <input type="password" name="password" id="gpu-auth-password" required autocomplete="current-password" placeholder="••••••••" minlength="6">
+      </label>
+
+      <p class="gpu-auth-meta gpu-auth-meta--signin">
+        <a href="#" id="gpu-auth-forgot" data-i18n="auth.forgot">Forgot password? We'll email a reset link.</a>
+      </p>
+      <p class="gpu-auth-meta gpu-auth-meta--register" hidden data-i18n="auth.privacy">
+        By creating an account you agree we'll process your company data to issue invoices and provision services. We never share it.
+      </p>
+
+      <button type="submit" class="gpu-btn gpu-btn-primary" style="width:100%" id="gpu-auth-submit" data-i18n="auth.submitSignin">Sign in</button>
     </form>
   </div>
 </div>
@@ -704,8 +784,7 @@
     <p class="gpu-modal-lead" data-i18n="inv.lead">Pay against the reference number below. Provisioning starts the moment the wire clears.</p>
     <div class="gpu-invoice-box" id="gpu-invoice-content"></div>
     <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
-      <button type="button" class="gpu-btn gpu-btn-primary" id="gpu-open-dash-from-inv" data-i18n="inv.cabinet">Open cabinet</button>
-      <button type="button" class="gpu-btn gpu-btn-outline" id="gpu-invoice-print" data-i18n="inv.print">Print / Save PDF</button>
+      <button type="button" class="gpu-btn gpu-btn-primary" id="gpu-invoice-print" data-i18n="inv.print">Print / Save PDF</button>
       <button type="button" class="gpu-btn gpu-btn-outline" data-close-invoice data-i18n="inv.close">Close</button>
     </div>
   </div>
