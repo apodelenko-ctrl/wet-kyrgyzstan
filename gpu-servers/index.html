@@ -3,467 +3,369 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enterprise GPU Cloud in Asia — WEST-EAST CLOUD</title>
-  <meta name="description" content="WEST-EAST CLOUD — on-demand NVIDIA H100, A100, RTX 4090 in Tier-3 data centers. B2B billing RUB, CNY, USDT. Contract via ОсОО «ВЕСТ-ИСТ ТРЕЙД», Bishkek.">
+  <title>Аренда GPU-серверов — ВЕСТ-ИСТ ТРЕЙД (Alibaba Cloud, Tencent Cloud)</title>
+  <meta name="description" content="Аренда GPU-серверов — ВЕСТ-ИСТ ТРЕЙД: Alibaba Cloud, Tencent Cloud, NVIDIA H100, A100, RTX 4090. Оплата RUB и BYN для компаний из СНГ, документы для бухгалтерии.">
+  <meta name="keywords" content="GPU, H100, A100, RTX 4090, Alibaba Cloud, Tencent Cloud, аренда сервера, BYN, RUB">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://apodelenko-ctrl.github.io/wet-kyrgyzstan/gpu-servers/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="gpu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
 </head>
-<body class="gpu-landing">
+<body class="gpu-subpage">
 
-<header class="gpu-header">
-  <div class="gpu-wrap gpu-header-inner">
-    <a href="#top" class="gpu-brand">
-      <span class="gpu-brand-name">WEST-EAST CLOUD</span>
-      <span class="gpu-brand-product">Enterprise GPU · 西东云</span>
-    </a>
-    <nav class="gpu-nav" id="gpu-nav" aria-label="WEST-EAST CLOUD">
-      <a href="#pricing">Pricing</a>
-      <a href="#trust">Trust</a>
-      <a href="#use-cases">Use Cases</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
+<header class="site-header">
+  <div class="container nav">
+    <a href="../" class="logo">ВЕСТ-ИСТ ТРЕЙД <span class="cn-mark">西东贸易</span></a>
+    <nav class="nav-links nav-links--tickets">
+      <a href="../index.html#about">О компании</a>
+      <a href="../index.html#roles">Две роли</a>
+      <a href="../index.html#services">Услуги</a>
+      <a href="../index.html#directions">Направления</a>
+      <a href="../index.html#media">PR и медиа</a>
+      <a href="../index.html#geography">География</a>
+      <a href="../logistics/">Логистика</a>
+      <a href="./" class="nav-link-gpu">GPU-серверы</a>
+      <a href="../tickets/" class="nav-link-tickets">Купить билет</a>
+      <a href="#contacts">Контакты</a>
     </nav>
-    <div class="gpu-header-actions">
-      <button type="button" class="gpu-btn gpu-btn-ghost gpu-btn-sm" data-open-quote>Get Instant Quote</button>
-      <button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-open-deploy>Deploy Instance</button>
-      <button type="button" class="gpu-menu-toggle" aria-label="Menu" aria-expanded="false" id="gpu-menu-toggle">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
-    </div>
+    <button class="nav-toggle" aria-label="Меню" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
   </div>
 </header>
 
-<section class="gpu-hero" id="top">
-  <div class="gpu-wrap">
-    <p class="gpu-hero-eyebrow">WEST-EAST CLOUD · Asia Region</p>
-    <h1>Enterprise-Grade GPU Cloud in Asia</h1>
-    <p class="gpu-hero-cn cn">亚洲企业级 GPU 云计算服务</p>
-    <p class="gpu-hero-sub">
-      <strong>Высокопроизводительные GPU-серверы в Азии.</strong> On-demand access to NVIDIA H100, A100, and RTX&nbsp;4090.
-      Transparent B2B billing and full compliance for CIS companies. Оплата <strong>RUB</strong>, <strong>CNY</strong>, <strong>USDT</strong> · закрывающие документы для юрлиц.
-    </p>
-    <div class="gpu-hero-cta">
-      <a class="gpu-btn gpu-btn-primary" href="#pricing">Выбрать конфигурацию</a>
-      <button type="button" class="gpu-btn gpu-btn-ghost" data-open-quote>Get Instant Quote</button>
-    </div>
-    <div class="gpu-powered">
-      <span class="gpu-powered-label">Infrastructure</span>
-      <div class="gpu-partner-badge gpu-partner-badge--ali">
-        <span>Powered by</span>
-        <span>Alibaba Cloud</span>
-      </div>
-      <div class="gpu-partner-badge gpu-partner-badge--tc">
-        <span>Powered by</span>
-        <span>Tencent Cloud</span>
-      </div>
-      <div class="gpu-partner-badge">
-        <span>NVIDIA</span>
-        <span>H100 · A100 · 4090</span>
+<section class="hero hero--gpu" id="top" aria-label="Аренда GPU-серверов">
+  <div class="hero-watermark" aria-hidden="true">智</div>
+  <div class="container hero-content">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">
+          GPU compute · Дата-центры Азии
+          <span class="cn-tag cn">智能算力</span>
+        </p>
+        <h1><span class="accent">Аренда GPU-серверов</span> в крупнейших дата-центрах Китая и Гонконга</h1>
+        <p class="hero-sub-cn cn">阿里云 · 腾讯云 · NVIDIA</p>
+        <p class="hero-lead">
+          Прямой доступ к мощностям Alibaba Cloud и Tencent Cloud (NVIDIA H100, A100, RTX 4090). Легальная оплата в RUB и BYN для компаний из СНГ — без скрытых комиссий и с закрывающими документами для бухгалтерии. Оформляется как сервис единого подрядчика — <strong>ОсОО «ВЕСТ-ИСТ ТРЕЙД»</strong> (Кыргызстан, г.&nbsp;Бишкек) — наряду с торговлей, логистикой и выставками.
+        </p>
+        <div class="hero-logistics-strip" aria-hidden="true">
+          <span class="hero-route-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.45"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.45" stroke-linecap="round"/></svg>
+          </span>
+          <span class="hero-route-pill">Alibaba Cloud</span>
+          <span class="hero-route-arrow">·</span>
+          <span class="hero-route-pill">Tencent Cloud</span>
+          <span class="hero-route-arrow">·</span>
+          <span class="hero-route-pill">NVIDIA / Tier-3</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-arrow" href="cloud/">WEST-EAST CLOUD — каталог и оплата</a>
+          <button type="button" class="btn btn-ghost btn-arrow" data-open-request-modal>Рассчитать стоимость</button>
+          <a class="btn btn-ghost btn-arrow" href="#gpu-plans">Смотреть конфигурации</a>
+        </div>
       </div>
     </div>
   </div>
+  <p class="hero-photo-credit">Фото стойки · <a href="https://unsplash.com/photos/a-rack-of-servers-in-a-server-room-2JJ3wBHu4_0?utm_source=west_east_trade&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></p>
 </section>
 
 <main>
-  <section class="gpu-section gpu-section--white" id="pricing">
-    <div class="gpu-wrap">
-      <div class="gpu-section-head">
-        <h2>Performance Plans</h2>
-        <p class="cn">算力配置方案</p>
-        <p>Ориентировочные месячные ставки. Итоговая смета — после согласования нагрузки, региона ЦОД и срока. Не публичная оферта.</p>
-      </div>
-
-      <div class="gpu-filters" role="search" aria-label="Filter instances">
-        <div class="gpu-filter">
-          <label for="gpu-filter-model">GPU Model</label>
-          <select id="gpu-filter-model">
-            <option value="all">All models</option>
-            <option value="h100">NVIDIA H100</option>
-            <option value="a100">NVIDIA A100</option>
-            <option value="4090">NVIDIA RTX 4090</option>
-          </select>
-        </div>
-        <div class="gpu-filter">
-          <label for="gpu-filter-region">Region</label>
-          <select id="gpu-filter-region">
-            <option value="all">All regions</option>
-            <option value="hk">Hong Kong</option>
-            <option value="sz">Shenzhen</option>
-          </select>
-        </div>
-        <div class="gpu-filter">
-          <label for="gpu-filter-status">Availability</label>
-          <select id="gpu-filter-status">
-            <option value="all">Any status</option>
-            <option value="available">Available only</option>
-          </select>
-        </div>
-        <p class="gpu-filter-hint"><span id="gpu-row-count">6</span> instance types shown</p>
-      </div>
-
-      <div class="gpu-table-wrap">
-        <table class="gpu-table" id="gpu-pricing-table">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Region</th>
-              <th>vCPU</th>
-              <th>RAM</th>
-              <th>GPU Memory</th>
-              <th>Price / Month</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-model="h100" data-region="hk" data-status="available">
-              <td>
-                <span class="gpu-model">NVIDIA H100 (80GB)</span>
-                <span class="gpu-model-sub">8× SXM5 · Training / Inference</span>
-              </td>
-              <td class="gpu-mono">HK · Tier-3</td>
-              <td class="gpu-mono num">128</td>
-              <td class="gpu-mono num">2 TB ECC</td>
-              <td class="gpu-mono num">640 GB HBM3</td>
-              <td class="gpu-price-cell num">
-                <strong>~ 1 450 000 ₽</strong>
-                <span>48 000 BYN · ~1 988 ₽/hr</span>
-              </td>
-              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
-              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-deploy="NVIDIA H100 (80GB) · HK 8×">Deploy Instance</button></td>
-            </tr>
-            <tr data-model="h100" data-region="sz" data-status="available">
-              <td>
-                <span class="gpu-model">NVIDIA H100 (80GB)</span>
-                <span class="gpu-model-sub">4× SXM5 · LLM fine-tune</span>
-              </td>
-              <td class="gpu-mono">SZ · Tier-3</td>
-              <td class="gpu-mono num">64</td>
-              <td class="gpu-mono num">1 TB ECC</td>
-              <td class="gpu-mono num">320 GB HBM3</td>
-              <td class="gpu-price-cell num">
-                <strong>~ 780 000 ₽</strong>
-                <span>от 26 000 BYN · ~1 069 ₽/hr</span>
-              </td>
-              <td><span class="gpu-badge gpu-badge--low">Limited</span></td>
-              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-deploy="NVIDIA H100 (80GB) · SZ 4×">Deploy Instance</button></td>
-            </tr>
-            <tr data-model="a100" data-region="hk" data-status="available">
-              <td>
-                <span class="gpu-model">NVIDIA A100 (80GB)</span>
-                <span class="gpu-model-sub">8× PCIe · ML / CV</span>
-              </td>
-              <td class="gpu-mono">HK · Tier-3</td>
-              <td class="gpu-mono num">96</td>
-              <td class="gpu-mono num">1 TB ECC</td>
-              <td class="gpu-mono num">640 GB HBM2e</td>
-              <td class="gpu-price-cell num">
-                <strong>~ 980 000 ₽</strong>
-                <span>32 000 BYN · ~1 342 ₽/hr</span>
-              </td>
-              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
-              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-deploy="NVIDIA A100 (80GB) · HK 8×">Deploy Instance</button></td>
-            </tr>
-            <tr data-model="a100" data-region="sz" data-status="available">
-              <td>
-                <span class="gpu-model">NVIDIA A100 (80GB)</span>
-                <span class="gpu-model-sub">4× · Research cluster</span>
-              </td>
-              <td class="gpu-mono">SZ · Tier-3</td>
-              <td class="gpu-mono num">48</td>
-              <td class="gpu-mono num">512 GB ECC</td>
-              <td class="gpu-mono num">320 GB HBM2e</td>
-              <td class="gpu-price-cell num">
-                <strong>~ 520 000 ₽</strong>
-                <span>от 17 000 BYN · ~712 ₽/hr</span>
-              </td>
-              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
-              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-deploy="NVIDIA A100 (80GB) · SZ 4×">Deploy Instance</button></td>
-            </tr>
-            <tr data-model="4090" data-region="hk" data-status="available">
-              <td>
-                <span class="gpu-model">NVIDIA RTX 4090 (24GB)</span>
-                <span class="gpu-model-sub">4× · Render / VDI</span>
-              </td>
-              <td class="gpu-mono">HK · Tier-3</td>
-              <td class="gpu-mono num">32</td>
-              <td class="gpu-mono num">256 GB</td>
-              <td class="gpu-mono num">96 GB GDDR6X</td>
-              <td class="gpu-price-cell num">
-                <strong>~ 380 000 ₽</strong>
-                <span>12 000 BYN · ~521 ₽/hr</span>
-              </td>
-              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
-              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-deploy="NVIDIA RTX 4090 (24GB) · HK 4×">Deploy Instance</button></td>
-            </tr>
-            <tr data-model="4090" data-region="sz" data-status="no">
-              <td>
-                <span class="gpu-model">NVIDIA RTX 4090 (24GB)</span>
-                <span class="gpu-model-sub">2× · Batch inference</span>
-              </td>
-              <td class="gpu-mono">SZ · Tier-3</td>
-              <td class="gpu-mono num">16</td>
-              <td class="gpu-mono num">128 GB</td>
-              <td class="gpu-mono num">48 GB GDDR6X</td>
-              <td class="gpu-price-cell num">
-                <strong>~ 210 000 ₽</strong>
-                <span>7 000 BYN · ~288 ₽/hr</span>
-              </td>
-              <td><span class="gpu-badge gpu-badge--no">Out of stock</span></td>
-              <td><button type="button" class="gpu-btn gpu-btn-outline gpu-btn-sm" disabled aria-disabled="true">Notify me</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="gpu-table-note">Hourly rates are indicative (monthly ÷ 730). Direct contracts with Alibaba Cloud and Tencent Cloud infrastructure. Billing entity: ОсОО «ВЕСТ-ИСТ ТРЕЙД» (WEST-EAST CLOUD), Kyrgyz Republic.</p>
+  <section class="section section-slate" id="gpu-cloud">
+    <div class="container" style="max-width:720px">
+      <p class="eyebrow">Онлайн-платформа <span class="cn-tag cn">西东云</span></p>
+      <h2>WEST-EAST CLOUD</h2>
+      <hr class="rule-gold">
+      <p class="lead" style="margin-top:1rem">
+        Каталог конфигураций с фиксированной ставкой: выберите GPU, добавьте в корзину, войдите как юрлицо и сформируйте счёт на оплату — без ожидания коммерческого предложения.
+      </p>
+      <p style="margin-top:20px">
+        <a class="btn btn-primary btn-arrow" href="cloud/">Перейти в каталог WEST-EAST CLOUD</a>
+      </p>
     </div>
   </section>
 
-  <section class="gpu-section" id="trust">
-    <div class="gpu-wrap">
-      <div class="gpu-section-head">
-        <h2>Why teams trust this platform</h2>
-        <p class="cn">企业级合规与基础设施</p>
-        <p>Technical clarity first — verified infrastructure, transparent contracting, predictable B2B billing.</p>
-      </div>
-      <div class="gpu-trust-grid">
-        <div class="gpu-trust-card">
-          <h3>Seamless Payments</h3>
-          <p class="cn">灵活支付方案</p>
-          <p>Direct contract via Kyrgyzstan (Bishkek). Payment in <strong>RUB</strong>, <strong>CNY</strong>, <strong>USDT</strong>. Closing documents for accounting.</p>
+  <section class="section section-paper">
+    <div class="container">
+      <p class="eyebrow">Преимущества <span class="cn-tag cn">优势</span></p>
+      <h2>Почему мы</h2>
+      <hr class="rule-gold">
+      <p class="lead">
+        ОсОО «ВЕСТ-ИСТ ТРЕЙД» объединяет азиатскую инфраструктуру Tier-3 с понятным контрактом и расчётами для резидентов РФ и РБ.
+      </p>
+      <div class="gpu-why-grid">
+        <div class="geo-card hub">
+          <h3 class="gpu-why-h3">Обход ограничений</h3>
+          <p class="geo-body" style="margin:0">
+            Бесперебойная оплата корпоративными картами и банковскими переводами из РФ и РБ. Подготовим закрывающие документы для вашего учёта.
+          </p>
         </div>
-        <div class="gpu-trust-card">
-          <h3>Verified Tier-3 DCs</h3>
-          <p class="cn">认证 Tier-3 数据中心</p>
-          <p>Hosted in <strong>Hong Kong</strong> and <strong>Shenzhen</strong> with low-latency access. ISO/IEC 27001 aligned provider stack.</p>
+        <div class="geo-card">
+          <h3 class="gpu-why-h3">Азиатская инфраструктура</h3>
+          <p class="geo-body" style="margin:0">
+            Серверы в сертифицированных дата-центрах Гонконга и Шэньчжэня у лидеров рынка облачных вычислений — Alibaba и Tencent.
+          </p>
         </div>
-        <div class="gpu-trust-card">
-          <h3>Direct cloud contracts</h3>
-          <p class="cn">直连云厂商</p>
-          <p>Capacity sourced through <strong>Alibaba Cloud</strong> and <strong>Tencent Cloud</strong> — same silicon, enterprise SLA path.</p>
-        </div>
-        <div class="gpu-trust-card gpu-trust-card--legal">
-          <h3>Legal entity</h3>
-          <p class="cn">吉尔吉斯斯坦签约主体</p>
-          <p><strong>WEST-EAST CLOUD</strong> — product of <strong>ОсОО «ВЕСТ-ИСТ ТРЕЙД»</strong><br>Бишкек, пр. Чынгыза Айтматова, 16<br>ИНН 02711202310217</p>
+        <div class="geo-card">
+          <h3 class="gpu-why-h3">Доступность железа</h3>
+          <p class="geo-body" style="margin:0">
+            Современные ускорители, включая конфигурации на базе NVIDIA H100, без многомесячных ожиданий, типичных у западных поставщиков.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="gpu-section gpu-section--white" id="use-cases">
-    <div class="gpu-wrap">
-      <div class="gpu-section-head">
-        <h2>Use Cases</h2>
-        <p class="cn">典型应用场景</p>
-        <p>Pick the workload profile that matches your team — same table, same deploy flow.</p>
-      </div>
-      <div class="gpu-cases-grid">
-        <article class="gpu-case">
-          <div class="gpu-case-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M8 7h8M6 11h12v10H6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 15h6M9 18h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  <section class="section" id="gpu-plans">
+    <div class="container">
+      <p class="eyebrow">Тарифы <span class="cn-tag cn">价格</span></p>
+      <h2>Тарифы и конфигурации</h2>
+      <hr class="rule-gold">
+      <p class="lead">
+        Ориентировочные ежемесячные ставки при аренде под задачу; итоговая смета — после согласования нагрузки и срока.
+      </p>
+      <div class="gpu-plans-grid">
+        <article class="role-card">
+          <p class="geo-tag">Флагман ИИ</p>
+          <h3>NVIDIA H100 (80GB)</h3>
+          <p class="lead">Для обучения крупных языковых моделей и высоконагруженного инференса.</p>
+          <div class="gpu-spec">GPU: NVIDIA H100 80GB SXM5<br>RAM: до 2 TB ECC<br>Сеть: до 100 Gbps</div>
+          <p class="gpu-price-label">Ориентир</p>
+          <p class="gpu-price-line">от 48 000 BYN / мес</p>
+          <p class="gpu-price-note">~ от 1 450 000 ₽ / мес</p>
+          <div class="gpu-card-cta">
+            <button type="button" class="btn btn-primary btn-arrow" data-open-request-modal>Запросить сервер</button>
           </div>
-          <h3>Training LLM</h3>
-          <p class="cn">大模型训练</p>
-          <p>Pre-training and fine-tuning on H100 / A100 clusters. Multi-node NVLink where required.</p>
         </article>
-        <article class="gpu-case">
-          <div class="gpu-case-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <article class="role-card">
+          <p class="geo-tag">ML · CV</p>
+          <h3>NVIDIA A100 (80GB)</h3>
+          <p class="lead">Универсальная платформа для машинного обучения, Computer Vision и научных расчётов.</p>
+          <div class="gpu-spec">GPU: NVIDIA A100 80GB<br>RAM: до 1 TB ECC<br>Сеть: до 25–100 Gbps</div>
+          <p class="gpu-price-label">Ориентир</p>
+          <p class="gpu-price-line">от 32 000 BYN / мес</p>
+          <p class="gpu-price-note">~ от 980 000 ₽ / мес</p>
+          <div class="gpu-card-cta">
+            <button type="button" class="btn btn-primary btn-arrow" data-open-request-modal>Запросить сервер</button>
           </div>
-          <h3>Computer Vision</h3>
-          <p class="cn">计算机视觉</p>
-          <p>Detection, segmentation, and video analytics pipelines on A100 with predictable monthly caps.</p>
         </article>
-        <article class="gpu-case">
-          <div class="gpu-case-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 18l4-8 4 5 4-9 4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <article class="role-card">
+          <p class="geo-tag">Рендер · данные</p>
+          <h3>NVIDIA RTX 4090 (24GB)</h3>
+          <p class="lead">Для 3D-рендеринга, видеопродакшена и аналитики данных с ускорением на CUDA.</p>
+          <div class="gpu-spec">GPU: NVIDIA RTX 4090 24GB<br>RAM: до 256 GB<br>NVMe: до 8 TB</div>
+          <p class="gpu-price-label">Ориентир</p>
+          <p class="gpu-price-line">от 12 000 BYN / мес</p>
+          <p class="gpu-price-note">~ от 380 000 ₽ / мес</p>
+          <div class="gpu-card-cta">
+            <button type="button" class="btn btn-primary btn-arrow" data-open-request-modal>Запросить сервер</button>
           </div>
-          <h3>Real-time Rendering</h3>
-          <p class="cn">实时渲染</p>
-          <p>3D, VFX, and generative media on RTX 4090 — CUDA-optimized instances for burst workloads.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="gpu-section" id="faq">
-    <div class="gpu-wrap">
-      <div class="gpu-section-head">
-        <h2>FAQ</h2>
-        <p class="cn">常见问题</p>
+  <section class="section section-paper">
+    <div class="container">
+      <p class="eyebrow">Сценарии <span class="cn-tag cn">场景</span></p>
+      <h2>Для каких задач подходят наши серверы</h2>
+      <hr class="rule-gold">
+      <p class="lead">
+        Единая платформа для команд data science, продакшена и R&amp;D — с предсказуемой стоимостью и инженерным сопровождением.
+      </p>
+      <div class="gpu-why-grid">
+        <div class="geo-card hub">
+          <h3 class="gpu-why-h3">Обучение нейросетей</h3>
+          <p class="geo-body" style="margin:0">
+            LLM, Computer Vision, рекомендательные системы и дообучение моделей на корпоративных данных.
+          </p>
+        </div>
+        <div class="geo-card">
+          <h3 class="gpu-why-h3">3D-рендеринг и видео</h3>
+          <p class="geo-body" style="margin:0">
+            Распределённый рендер, постпродакшн, генеративный контент и тяжёлые визуальные пайплайны.
+          </p>
+        </div>
+        <div class="geo-card">
+          <h3 class="gpu-why-h3">Big Data и вычисления</h3>
+          <p class="geo-body" style="margin:0">
+            Высоконагруженные симуляции, пакетная обработка данных и вычислительная химия / биоинформатика.
+          </p>
+        </div>
       </div>
-      <div class="gpu-faq">
-        <details>
-          <summary>Which currencies are supported?</summary>
-          <p>We accept RUB, BYN, CNY, and USDT by agreement. Terms are fixed in the contract before service start.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">FAQ <span class="cn-tag cn">问答</span></p>
+      <h2>Частые вопросы</h2>
+      <hr class="rule-gold">
+      <p class="lead" style="max-width:720px">Кратко о деньгах, локациях и тестовом доступе. Подробности — в коммерческом предложении после заявки.</p>
+      <div class="gpu-faq-list">
+        <details class="gpu-details">
+          <summary>В какой валюте я могу оплатить?</summary>
+          <p class="gpu-details-body">Принимаем RUB, BYN, а также расчёты в CNY и USDT по согласованию с финансовой службой. Условия и договор фиксируются до старта сервиса.</p>
         </details>
-        <details>
-          <summary>Where are instances physically hosted?</summary>
-          <p>Hong Kong and mainland China (Greater Bay Area). Provider facilities meet ISO/IEC 27001 and cloud security baselines.</p>
+        <details class="gpu-details">
+          <summary>Где физически находятся серверы?</summary>
+          <p class="gpu-details-body">Вычислительные мощности размещаются в дата-центрах Гонконга и материкового Китая (в т.ч. регион Большого залива). Инфраструктура поставщиков сертифицирована по ISO/IEC 27001 и отраслевым стандартам облачной безопасности.</p>
         </details>
-        <details>
-          <summary>Is there a pilot or test slot?</summary>
-          <p>Yes — for verified legal entities we can provision a limited test instance or pilot node after KYC.</p>
+        <details class="gpu-details">
+          <summary>Есть ли тестовый период?</summary>
+          <p class="gpu-details-body">Да. Для юридических лиц после проверки документов мы можем выделить ограниченный тестовый доступ или пилотный слот для проверки производительности под вашу нагрузку.</p>
         </details>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-slate" id="gpu-request">
+    <div class="container" style="max-width:640px">
+      <p class="eyebrow">Заявка <span class="cn-tag cn">提交</span></p>
+      <h2>Оставьте заявку</h2>
+      <hr class="rule-gold">
+      <p class="lead" style="margin-top:1rem;font-size:1rem">Наш инженер подберёт оптимальную конфигурацию под вашу задачу и подготовит коммерческое предложение в выбранной валюте.</p>
+      <form class="request-form gpu-lead-form" action="https://formsubmit.co/wet4kg@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="ВЕСТ-ИСТ ТРЕЙД — GPU, заявка с сайта">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" id="gpu-inline-next" value="">
+        <label class="request-field">
+          <span class="request-label">Имя</span>
+          <input type="text" name="full_name" required autocomplete="name" placeholder="Иван Иванов">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@company.com">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Telegram / WhatsApp</span>
+          <input type="text" name="messenger" autocomplete="tel" placeholder="@username">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Название компании</span>
+          <input type="text" name="company" required autocomplete="organization" placeholder="ООО «…»">
+        </label>
+        <label class="request-field">
+          <span class="request-label">Описание задачи / требуемый GPU</span>
+          <textarea name="message" required rows="5" placeholder="Задача, срок, желаемая конфигурация"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary request-submit">Отправить запрос</button>
+      </form>
     </div>
   </section>
 </main>
 
-<footer class="gpu-footer" id="contact">
-  <div class="gpu-wrap">
-    <div class="gpu-footer-grid">
+<footer class="footer footer--compact" id="contacts">
+  <div class="footer-intro">
+    <div class="container">
+      <p class="footer-intro-title">ВЕСТ-ИСТ ТРЕЙД</p>
+      <p class="footer-intro-text">
+        Аренда GPU (Alibaba Cloud, Tencent Cloud) — те же площадки и конфигурации; контракт и расчёты через оператора в Кыргызстане.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-grid footer-grid--compact">
       <div>
-        <h4>Contracting entity</h4>
-        <p class="gpu-footer-brand">WEST-EAST CLOUD</p>
-        <p style="margin:6px 0 0;font-size:12px;opacity:0.75">ОсОО «ВЕСТ-ИСТ ТРЕЙД» · WEST-EAST TRADE LLC</p>
-        <p style="margin:10px 0 0;line-height:1.6">
-          Кыргызская Республика, г. Бишкек<br>
-          Первомайский район, пр. Чынгыза Айтматова, д. 16<br>
+        <h4>Компания</h4>
+        <p class="footer-brand">ОсОО «ВЕСТ-ИСТ ТРЕЙД»</p>
+        <p class="footer-cn cn">西东贸易</p>
+        <p class="footer-addr">
+          Кыргызская Республика<br>
+          г. Бишкек, Первомайский район, пр. Чынгыза Айтматова, д. 16<br>
           ИНН 02711202310217
         </p>
       </div>
       <div>
-        <h4>Sales &amp; deploy</h4>
-        <p style="margin:0;line-height:1.7">
+        <h4>Контакт</h4>
+        <p>
           <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a><br>
-          <button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" style="margin-top:12px" data-open-deploy>Deploy Instance</button>
+          <span class="footer-region">Бишкек · Китай и Азия — операции</span>
         </p>
       </div>
+      <div>
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="../">Главная</a></li>
+          <li><a href="../logistics/">Логистика</a></li>
+          <li><a href="./">GPU-серверы</a></li>
+          <li><a href="cloud/">WEST-EAST CLOUD</a></li>
+          <li><a href="../tickets/">Выставки / билеты</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="gpu-footer-bottom">
-      <span>&copy; <span id="gpu-year"></span> WEST-EAST CLOUD · ОсОО «ВЕСТ-ИСТ ТРЕЙД»</span>
-      <span class="cn">西东云 · 智能算力</span>
+    <p class="footer-tagline footer-tagline-below">Информация на сайте не является публичной офертой.</p>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> ОсОО «ВЕСТ-ИСТ ТРЕЙД», Кыргызская Республика.</span>
+      <span class="cn">西东贸易 · Единый оператор</span>
     </div>
   </div>
 </footer>
 
-<div class="gpu-modal" id="gpu-modal" hidden>
-  <button type="button" class="gpu-modal-backdrop" tabindex="-1" aria-label="Close" data-close-modal></button>
-  <div class="gpu-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gpu-modal-title">
-    <button type="button" class="gpu-modal-close" aria-label="Close" data-close-modal>&times;</button>
-    <h2 id="gpu-modal-title">Deploy Instance</h2>
-    <p class="gpu-modal-lead" id="gpu-modal-lead">Submit configuration — we respond with provisioning timeline and commercial terms.</p>
-    <form class="gpu-form" action="https://formsubmit.co/wet4kg@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="WEST-EAST CLOUD — Deploy / Quote request">
+<div class="request-modal" id="request-modal" hidden data-request-modal>
+  <button type="button" class="request-modal-backdrop" tabindex="-1" aria-label="Закрыть" data-close-modal></button>
+  <div class="request-modal-panel" role="dialog" aria-modal="true" aria-labelledby="request-modal-title">
+    <button type="button" class="request-modal-close" aria-label="Закрыть" data-close-modal>&times;</button>
+    <h2 id="request-modal-title" class="request-modal-title">Запросить сервер</h2>
+    <p class="request-modal-lead">Укажите конфигурацию и контакт — подготовим коммерческое предложение.</p>
+    <form class="request-form" action="https://formsubmit.co/wet4kg@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="ВЕСТ-ИСТ ТРЕЙД — GPU, модальная заявка">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" id="gpu-form-next" value="">
-      <label class="gpu-field">
-        <span>Instance / GPU</span>
-        <input type="text" name="instance" id="gpu-form-instance" required placeholder="NVIDIA H100 (80GB) · HK">
+      <input type="hidden" name="_next" id="request-form-next" value="">
+      <label class="request-field">
+        <span class="request-label">Имя</span>
+        <input type="text" name="full_name" required autocomplete="name" placeholder="Иван Иванов">
       </label>
-      <label class="gpu-field">
-        <span>Company</span>
-        <input type="text" name="company" required autocomplete="organization" placeholder="Legal entity name">
-      </label>
-      <label class="gpu-field">
-        <span>Work email</span>
+      <label class="request-field">
+        <span class="request-label">Email</span>
         <input type="email" name="email" required autocomplete="email" placeholder="you@company.com">
       </label>
-      <label class="gpu-field">
-        <span>Telegram / WhatsApp</span>
-        <input type="text" name="messenger" placeholder="@handle">
+      <label class="request-field">
+        <span class="request-label">Telegram / WhatsApp</span>
+        <input type="text" name="messenger" autocomplete="tel" placeholder="@username">
       </label>
-      <label class="gpu-field">
-        <span>Workload notes</span>
-        <textarea name="message" rows="4" placeholder="Duration, region preference, compliance requirements"></textarea>
+      <label class="request-field">
+        <span class="request-label">Название компании</span>
+        <input type="text" name="company" required autocomplete="organization" placeholder="ООО «…»">
       </label>
-      <button type="submit" class="gpu-btn gpu-btn-primary" style="width:100%">Submit — Get Instant Quote</button>
+      <label class="request-field">
+        <span class="request-label">Описание задачи / требуемый GPU</span>
+        <textarea name="message" required rows="5" placeholder="H100 / A100 / 4090, срок, нагрузка"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary request-submit">Отправить запрос</button>
     </form>
   </div>
 </div>
 
 <script>
-(function () {
-  document.getElementById('gpu-year').textContent = new Date().getFullYear();
-
-  var modal = document.getElementById('gpu-modal');
-  var instanceInput = document.getElementById('gpu-form-instance');
-  var modalTitle = document.getElementById('gpu-modal-title');
-  var modalLead = document.getElementById('gpu-modal-lead');
-  var nextInput = document.getElementById('gpu-form-next');
-  if (nextInput) nextInput.value = window.location.href.split('#')[0];
-
-  function openModal(opts) {
-    opts = opts || {};
-    if (modalTitle) modalTitle.textContent = opts.title || 'Deploy Instance';
-    if (modalLead) modalLead.textContent = opts.lead || 'Submit configuration — we respond with provisioning timeline and commercial terms.';
-    if (instanceInput && opts.instance) instanceInput.value = opts.instance;
-    modal.hidden = false;
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal() {
-    modal.hidden = true;
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('[data-open-deploy]').forEach(function (btn) {
-    btn.addEventListener('click', function () { openModal({ title: 'Deploy Instance' }); });
-  });
-  document.querySelectorAll('[data-open-quote]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      openModal({ title: 'Get Instant Quote', lead: 'Describe your workload — we return pricing in your preferred currency.' });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  (function () {
+    var modal = document.getElementById('request-modal');
+    var nextInput = document.getElementById('request-form-next');
+    var inlineNext = document.getElementById('gpu-inline-next');
+    var url = window.location.href.split('#')[0];
+    if (nextInput) nextInput.value = url;
+    if (inlineNext) inlineNext.value = url;
+    if (!modal) return;
+    function openModal() {
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-open-request-modal]').forEach(function (btn) {
+      btn.addEventListener('click', openModal);
     });
-  });
-  document.querySelectorAll('[data-deploy]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      openModal({ instance: btn.getAttribute('data-deploy') || '', title: 'Deploy Instance' });
+    modal.querySelectorAll('[data-close-modal]').forEach(function (el) {
+      el.addEventListener('click', closeModal);
     });
-  });
-  modal.querySelectorAll('[data-close-modal]').forEach(function (el) {
-    el.addEventListener('click', closeModal);
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.hidden) closeModal();
-  });
-
-  var modelSel = document.getElementById('gpu-filter-model');
-  var regionSel = document.getElementById('gpu-filter-region');
-  var statusSel = document.getElementById('gpu-filter-status');
-  var countEl = document.getElementById('gpu-row-count');
-  var rows = document.querySelectorAll('#gpu-pricing-table tbody tr');
-
-  function applyFilters() {
-    var model = modelSel.value;
-    var region = regionSel.value;
-    var status = statusSel.value;
-    var n = 0;
-    rows.forEach(function (row) {
-      var okModel = model === 'all' || row.getAttribute('data-model') === model;
-      var okRegion = region === 'all' || row.getAttribute('data-region') === region;
-      var rowStatus = row.getAttribute('data-status');
-      var okStatus = status === 'all' || (status === 'available' && rowStatus !== 'no');
-      var show = okModel && okRegion && okStatus;
-      row.hidden = !show;
-      if (show) n++;
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
     });
-    if (countEl) countEl.textContent = String(n);
-  }
-  [modelSel, regionSel, statusSel].forEach(function (el) {
-    if (el) el.addEventListener('change', applyFilters);
-  });
-  applyFilters();
-
-  var toggle = document.getElementById('gpu-menu-toggle');
-  var nav = document.getElementById('gpu-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-})();
+  })();
 </script>
 
 </body>

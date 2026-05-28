@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterprise GPU Cloud in Asia — WEST-EAST CLOUD</title>
+  <meta name="description" content="WEST-EAST CLOUD — on-demand NVIDIA H100, A100, RTX 4090 in Tier-3 data centers. B2B billing RUB, CNY, USDT. Contract via ОсОО «ВЕСТ-ИСТ ТРЕЙД», Bishkek.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://apodelenko-ctrl.github.io/wet-kyrgyzstan/gpu-servers/cloud/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gpu.css">
+</head>
+<body class="gpu-landing">
+
+<header class="gpu-header">
+  <div class="gpu-wrap gpu-header-inner">
+    <a href="../" class="gpu-brand">
+      <span class="gpu-brand-name">WEST-EAST CLOUD</span>
+      <span class="gpu-brand-product">Enterprise GPU · 西东云</span>
+    </a>
+    <nav class="gpu-nav" id="gpu-nav" aria-label="WEST-EAST CLOUD">
+      <a href="../">GPU-серверы</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#trust">Trust</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="gpu-header-actions">
+      <span class="gpu-account-pill" id="gpu-account-label" hidden></span>
+      <button type="button" class="gpu-btn gpu-btn-ghost gpu-btn-sm" id="gpu-auth-btn" data-open-auth>Sign In</button>
+      <button type="button" class="gpu-btn gpu-btn-ghost gpu-btn-sm gpu-cart-btn" data-open-cart aria-label="Cart">
+        Cart
+        <span class="gpu-cart-count" id="gpu-cart-count" hidden>0</span>
+      </button>
+      <button type="button" class="gpu-menu-toggle" aria-label="Menu" aria-expanded="false" id="gpu-menu-toggle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="gpu-hero" id="top">
+  <div class="gpu-wrap">
+    <p class="gpu-hero-eyebrow">WEST-EAST CLOUD · Asia Region</p>
+    <h1>Enterprise-Grade GPU Cloud in Asia</h1>
+    <p class="gpu-hero-cn cn">亚洲企业级 GPU 云计算服务</p>
+    <p class="gpu-hero-sub">
+      <strong>Высокопроизводительные GPU-серверы в Азии.</strong> On-demand access to NVIDIA H100, A100, and RTX&nbsp;4090.
+      Transparent B2B billing and full compliance for CIS companies. Оплата <strong>RUB</strong>, <strong>CNY</strong>, <strong>USDT</strong> · закрывающие документы для юрлиц.
+    </p>
+    <div class="gpu-hero-cta">
+      <a class="gpu-btn gpu-btn-primary" href="#pricing">Выбрать конфигурацию</a>
+      <button type="button" class="gpu-btn gpu-btn-ghost" data-open-auth>Войти в кабинет</button>
+    </div>
+    <div class="gpu-powered">
+      <span class="gpu-powered-label">Infrastructure</span>
+      <div class="gpu-partner-badge gpu-partner-badge--ali">
+        <span>Powered by</span>
+        <span>Alibaba Cloud</span>
+      </div>
+      <div class="gpu-partner-badge gpu-partner-badge--tc">
+        <span>Powered by</span>
+        <span>Tencent Cloud</span>
+      </div>
+      <div class="gpu-partner-badge">
+        <span>NVIDIA</span>
+        <span>H100 · A100 · 4090</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="gpu-section gpu-section--white" id="pricing">
+    <div class="gpu-wrap">
+      <div class="gpu-section-head">
+        <h2>Performance Plans</h2>
+        <p class="cn">算力配置方案</p>
+        <p>Публичный каталог с <strong>фиксированной месячной ставкой</strong>. Выберите конфигурацию → добавьте в корзину → авторизуйтесь как юрлицо → сформируйте счёт на оплату.</p>
+      </div>
+
+      <div class="gpu-flow-steps" aria-label="Order flow">
+        <span><strong>1.</strong> Catalog</span>
+        <span><strong>2.</strong> Add to cart</span>
+        <span><strong>3.</strong> Sign in (B2B)</span>
+        <span><strong>4.</strong> Generate invoice</span>
+      </div>
+
+      <div class="gpu-filters" role="search" aria-label="Filter instances">
+        <div class="gpu-filter">
+          <label for="gpu-filter-model">GPU Model</label>
+          <select id="gpu-filter-model">
+            <option value="all">All models</option>
+            <option value="h100">NVIDIA H100</option>
+            <option value="a100">NVIDIA A100</option>
+            <option value="4090">NVIDIA RTX 4090</option>
+          </select>
+        </div>
+        <div class="gpu-filter">
+          <label for="gpu-filter-region">Region</label>
+          <select id="gpu-filter-region">
+            <option value="all">All regions</option>
+            <option value="hk">Hong Kong</option>
+            <option value="sz">Shenzhen</option>
+          </select>
+        </div>
+        <div class="gpu-filter">
+          <label for="gpu-filter-status">Availability</label>
+          <select id="gpu-filter-status">
+            <option value="all">Any status</option>
+            <option value="available">Available only</option>
+          </select>
+        </div>
+        <p class="gpu-filter-hint"><span id="gpu-row-count">6</span> instance types shown</p>
+      </div>
+
+      <div class="gpu-table-wrap">
+        <table class="gpu-table" id="gpu-pricing-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Region</th>
+              <th>vCPU</th>
+              <th>RAM</th>
+              <th>GPU Memory</th>
+              <th>Price / Month</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-model="h100" data-region="hk" data-status="available"
+                data-id="h100-hk-8x" data-name="NVIDIA H100 (80GB) · HK 8× SXM5"
+                data-price-rub="1450000" data-price-byn="48000" data-price-hour="1986">
+              <td>
+                <span class="gpu-model">NVIDIA H100 (80GB)</span>
+                <span class="gpu-model-sub">8× SXM5 · Training / Inference</span>
+              </td>
+              <td class="gpu-mono">HK · Tier-3</td>
+              <td class="gpu-mono num">128</td>
+              <td class="gpu-mono num">2 TB ECC</td>
+              <td class="gpu-mono num">640 GB HBM3</td>
+              <td class="gpu-price-cell num">
+                <strong>1 450 000 ₽</strong>
+                <span>48 000 BYN · 1 986 ₽/hr</span>
+              </td>
+              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
+              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-add-cart>Add to Cart</button></td>
+            </tr>
+            <tr data-model="h100" data-region="sz" data-status="available"
+                data-id="h100-sz-4x" data-name="NVIDIA H100 (80GB) · SZ 4× SXM5"
+                data-price-rub="780000" data-price-byn="26000" data-price-hour="1068">
+              <td>
+                <span class="gpu-model">NVIDIA H100 (80GB)</span>
+                <span class="gpu-model-sub">4× SXM5 · LLM fine-tune</span>
+              </td>
+              <td class="gpu-mono">SZ · Tier-3</td>
+              <td class="gpu-mono num">64</td>
+              <td class="gpu-mono num">1 TB ECC</td>
+              <td class="gpu-mono num">320 GB HBM3</td>
+              <td class="gpu-price-cell num">
+                <strong>780 000 ₽</strong>
+                <span>26 000 BYN · 1 068 ₽/hr</span>
+              </td>
+              <td><span class="gpu-badge gpu-badge--low">Limited</span></td>
+              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-add-cart>Add to Cart</button></td>
+            </tr>
+            <tr data-model="a100" data-region="hk" data-status="available"
+                data-id="a100-hk-8x" data-name="NVIDIA A100 (80GB) · HK 8× PCIe"
+                data-price-rub="980000" data-price-byn="32000" data-price-hour="1342">
+              <td>
+                <span class="gpu-model">NVIDIA A100 (80GB)</span>
+                <span class="gpu-model-sub">8× PCIe · ML / CV</span>
+              </td>
+              <td class="gpu-mono">HK · Tier-3</td>
+              <td class="gpu-mono num">96</td>
+              <td class="gpu-mono num">1 TB ECC</td>
+              <td class="gpu-mono num">640 GB HBM2e</td>
+              <td class="gpu-price-cell num">
+                <strong>980 000 ₽</strong>
+                <span>32 000 BYN · 1 342 ₽/hr</span>
+              </td>
+              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
+              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-add-cart>Add to Cart</button></td>
+            </tr>
+            <tr data-model="a100" data-region="sz" data-status="available"
+                data-id="a100-sz-4x" data-name="NVIDIA A100 (80GB) · SZ 4×"
+                data-price-rub="520000" data-price-byn="17000" data-price-hour="712">
+              <td>
+                <span class="gpu-model">NVIDIA A100 (80GB)</span>
+                <span class="gpu-model-sub">4× · Research cluster</span>
+              </td>
+              <td class="gpu-mono">SZ · Tier-3</td>
+              <td class="gpu-mono num">48</td>
+              <td class="gpu-mono num">512 GB ECC</td>
+              <td class="gpu-mono num">320 GB HBM2e</td>
+              <td class="gpu-price-cell num">
+                <strong>520 000 ₽</strong>
+                <span>17 000 BYN · 712 ₽/hr</span>
+              </td>
+              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
+              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-add-cart>Add to Cart</button></td>
+            </tr>
+            <tr data-model="4090" data-region="hk" data-status="available"
+                data-id="4090-hk-4x" data-name="NVIDIA RTX 4090 (24GB) · HK 4×"
+                data-price-rub="380000" data-price-byn="12000" data-price-hour="521">
+              <td>
+                <span class="gpu-model">NVIDIA RTX 4090 (24GB)</span>
+                <span class="gpu-model-sub">4× · Render / VDI</span>
+              </td>
+              <td class="gpu-mono">HK · Tier-3</td>
+              <td class="gpu-mono num">32</td>
+              <td class="gpu-mono num">256 GB</td>
+              <td class="gpu-mono num">96 GB GDDR6X</td>
+              <td class="gpu-price-cell num">
+                <strong>380 000 ₽</strong>
+                <span>12 000 BYN · 521 ₽/hr</span>
+              </td>
+              <td><span class="gpu-badge gpu-badge--ok">Available</span></td>
+              <td><button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" data-add-cart>Add to Cart</button></td>
+            </tr>
+            <tr data-model="4090" data-region="sz" data-status="no"
+                data-id="4090-sz-2x" data-name="NVIDIA RTX 4090 (24GB) · SZ 2×"
+                data-price-rub="210000" data-price-byn="7000" data-price-hour="288">
+              <td>
+                <span class="gpu-model">NVIDIA RTX 4090 (24GB)</span>
+                <span class="gpu-model-sub">2× · Batch inference</span>
+              </td>
+              <td class="gpu-mono">SZ · Tier-3</td>
+              <td class="gpu-mono num">16</td>
+              <td class="gpu-mono num">128 GB</td>
+              <td class="gpu-mono num">48 GB GDDR6X</td>
+              <td class="gpu-price-cell num">
+                <strong>210 000 ₽</strong>
+                <span>7 000 BYN · 288 ₽/hr</span>
+              </td>
+              <td><span class="gpu-badge gpu-badge--no">Out of stock</span></td>
+              <td><button type="button" class="gpu-btn gpu-btn-outline gpu-btn-sm" disabled aria-disabled="true">Unavailable</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="gpu-table-note">Ставка фиксируется в корзине на момент заказа. Почасовая цена = месячная ÷ 730. Счёт выставляет <strong>ОсОО «ВЕСТ-ИСТ ТРЕЙД»</strong> (WEST-EAST CLOUD). После оплаты — provisioning instance в выбранном регионе.</p>
+    </div>
+  </section>
+
+  <section class="gpu-section" id="trust">
+    <div class="gpu-wrap">
+      <div class="gpu-section-head">
+        <h2>Why teams trust this platform</h2>
+        <p class="cn">企业级合规与基础设施</p>
+        <p>Technical clarity first — verified infrastructure, transparent contracting, predictable B2B billing.</p>
+      </div>
+      <div class="gpu-trust-grid">
+        <div class="gpu-trust-card">
+          <h3>Seamless Payments</h3>
+          <p class="cn">灵活支付方案</p>
+          <p>Direct contract via Kyrgyzstan (Bishkek). Payment in <strong>RUB</strong>, <strong>CNY</strong>, <strong>USDT</strong>. Closing documents for accounting.</p>
+        </div>
+        <div class="gpu-trust-card">
+          <h3>Verified Tier-3 DCs</h3>
+          <p class="cn">认证 Tier-3 数据中心</p>
+          <p>Hosted in <strong>Hong Kong</strong> and <strong>Shenzhen</strong> with low-latency access. ISO/IEC 27001 aligned provider stack.</p>
+        </div>
+        <div class="gpu-trust-card">
+          <h3>Direct cloud contracts</h3>
+          <p class="cn">直连云厂商</p>
+          <p>Capacity sourced through <strong>Alibaba Cloud</strong> and <strong>Tencent Cloud</strong> — same silicon, enterprise SLA path.</p>
+        </div>
+        <div class="gpu-trust-card gpu-trust-card--legal">
+          <h3>Legal entity</h3>
+          <p class="cn">吉尔吉斯斯坦签约主体</p>
+          <p><strong>WEST-EAST CLOUD</strong> — product of <strong>ОсОО «ВЕСТ-ИСТ ТРЕЙД»</strong><br>Бишкек, пр. Чынгыза Айтматова, 16<br>ИНН 02711202310217</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gpu-section gpu-section--white" id="use-cases">
+    <div class="gpu-wrap">
+      <div class="gpu-section-head">
+        <h2>Use Cases</h2>
+        <p class="cn">典型应用场景</p>
+        <p>Pick the workload profile that matches your team — same catalog, same checkout flow.</p>
+      </div>
+      <div class="gpu-cases-grid">
+        <article class="gpu-case">
+          <div class="gpu-case-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M8 7h8M6 11h12v10H6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 15h6M9 18h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Training LLM</h3>
+          <p class="cn">大模型训练</p>
+          <p>Pre-training and fine-tuning on H100 / A100 clusters. Multi-node NVLink where required.</p>
+        </article>
+        <article class="gpu-case">
+          <div class="gpu-case-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Computer Vision</h3>
+          <p class="cn">计算机视觉</p>
+          <p>Detection, segmentation, and video analytics pipelines on A100 with predictable monthly caps.</p>
+        </article>
+        <article class="gpu-case">
+          <div class="gpu-case-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 18l4-8 4 5 4-9 4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Real-time Rendering</h3>
+          <p class="cn">实时渲染</p>
+          <p>3D, VFX, and generative media on RTX 4090 — CUDA-optimized instances for burst workloads.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gpu-section" id="faq">
+    <div class="gpu-wrap">
+      <div class="gpu-section-head">
+        <h2>FAQ</h2>
+        <p class="cn">常见问题</p>
+      </div>
+      <div class="gpu-faq">
+        <details open>
+          <summary>Как оформить заказ?</summary>
+          <p>Выберите конфигурацию в каталоге → <strong>Add to Cart</strong> → войдите в B2B-кабинет (email + компания) → <strong>Generate Invoice</strong>. Счёт формируется сразу; оплата по реквизитам в RUB / BYN / CNY / USDT.</p>
+        </details>
+        <details>
+          <summary>Which currencies are supported?</summary>
+          <p>RUB, BYN, CNY, and USDT. Сумма в счёте фиксируется в выбранной валюте на момент генерации invoice.</p>
+        </details>
+        <details>
+          <summary>Where are instances physically hosted?</summary>
+          <p>Hong Kong and mainland China (Greater Bay Area). Provider facilities meet ISO/IEC 27001 and cloud security baselines.</p>
+        </details>
+        <details>
+          <summary>When does provisioning start?</summary>
+          <p>После поступления оплаты по счёту — автоматический provisioning в выбранном регионе. Статус instance доступен в B2B-кабинете.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="gpu-footer" id="contact">
+  <div class="gpu-wrap">
+    <div class="gpu-footer-grid">
+      <div>
+        <h4>Contracting entity</h4>
+        <p class="gpu-footer-brand">WEST-EAST CLOUD</p>
+        <p style="margin:6px 0 0;font-size:12px;opacity:0.75">ОсОО «ВЕСТ-ИСТ ТРЕЙД» · WEST-EAST TRADE LLC</p>
+        <p style="margin:10px 0 0;line-height:1.6">
+          Кыргызская Республика, г. Бишкек<br>
+          Первомайский район, пр. Чынгыза Айтматова, д. 16<br>
+          ИНН 02711202310217
+        </p>
+      </div>
+      <div>
+        <h4>Billing</h4>
+        <p style="margin:0;line-height:1.7">
+          <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a><br>
+          <button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm" style="margin-top:12px" data-open-cart>Open Cart</button>
+        </p>
+      </div>
+    </div>
+    <div class="gpu-footer-bottom">
+      <span>&copy; <span id="gpu-year"></span> WEST-EAST CLOUD · ОсОО «ВЕСТ-ИСТ ТРЕЙД»</span>
+      <span class="cn">西东云 · 智能算力</span>
+    </div>
+  </div>
+</footer>
+
+<div class="gpu-cart-backdrop" id="gpu-cart-backdrop" hidden></div>
+
+<aside class="gpu-cart-drawer" id="gpu-cart-drawer" hidden aria-label="Shopping cart">
+  <div class="gpu-cart-head">
+    <h2>Cart</h2>
+    <button type="button" class="gpu-modal-close" aria-label="Close cart" data-close-cart>&times;</button>
+  </div>
+  <div class="gpu-cart-body" id="gpu-cart-body">
+    <p class="gpu-cart-empty">Корзина пуста. Добавьте конфигурацию из каталога.</p>
+  </div>
+  <div class="gpu-cart-foot">
+    <div class="gpu-cart-total">
+      <span>Total / month</span>
+      <span id="gpu-cart-total">0 ₽</span>
+    </div>
+    <button type="button" class="gpu-btn gpu-btn-primary" id="gpu-checkout-btn" disabled>Generate Invoice</button>
+    <button type="button" class="gpu-btn gpu-btn-outline" data-close-cart>Continue browsing</button>
+  </div>
+</aside>
+
+<div class="gpu-modal" id="gpu-auth-modal" hidden>
+  <button type="button" class="gpu-modal-backdrop" tabindex="-1" aria-label="Close" data-close-auth></button>
+  <div class="gpu-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gpu-auth-title">
+    <button type="button" class="gpu-modal-close" aria-label="Close" data-close-auth>&times;</button>
+    <h2 id="gpu-auth-title">B2B Sign In</h2>
+    <p class="gpu-modal-lead">Войдите как юрлицо — данные подставятся в счёт на оплату.</p>
+    <form class="gpu-form" id="gpu-auth-form">
+      <label class="gpu-field">
+        <span>Work email</span>
+        <input type="email" name="email" id="gpu-auth-email" required autocomplete="email" placeholder="you@company.com">
+      </label>
+      <label class="gpu-field">
+        <span>Company (legal name)</span>
+        <input type="text" name="company" id="gpu-auth-company" required autocomplete="organization" placeholder="ООО / ОсОО / ТОО …">
+      </label>
+      <label class="gpu-field">
+        <span>Tax ID / ИНН (optional)</span>
+        <input type="text" name="inn" id="gpu-auth-inn" placeholder="02711202310217">
+      </label>
+      <button type="submit" class="gpu-btn gpu-btn-primary" style="width:100%">Sign In</button>
+    </form>
+  </div>
+</div>
+
+<div class="gpu-modal" id="gpu-invoice-modal" hidden>
+  <button type="button" class="gpu-modal-backdrop" tabindex="-1" aria-label="Close" data-close-invoice></button>
+  <div class="gpu-modal-panel gpu-modal-panel--wide" role="dialog" aria-modal="true" aria-labelledby="gpu-invoice-title">
+    <button type="button" class="gpu-modal-close" aria-label="Close" data-close-invoice>&times;</button>
+    <h2 id="gpu-invoice-title">Invoice generated</h2>
+    <p class="gpu-modal-lead">Счёт готов к оплате. После поступления средств — автоматический provisioning.</p>
+    <div class="gpu-invoice-box" id="gpu-invoice-content"></div>
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+      <button type="button" class="gpu-btn gpu-btn-primary" id="gpu-invoice-print">Print / Save PDF</button>
+      <button type="button" class="gpu-btn gpu-btn-outline" data-close-invoice>Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="gpu-toast" id="gpu-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var CART_KEY = 'wec_cart';
+  var SESSION_KEY = 'wec_session';
+
+  document.getElementById('gpu-year').textContent = new Date().getFullYear();
+
+  function fmtRub(n) {
+    return Number(n).toLocaleString('ru-RU') + ' ₽';
+  }
+
+  function loadCart() {
+    try { return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }
+    catch (e) { return []; }
+  }
+  function saveCart(items) {
+    localStorage.setItem(CART_KEY, JSON.stringify(items));
+  }
+  function loadSession() {
+    try { return JSON.parse(localStorage.getItem(SESSION_KEY) || 'null'); }
+    catch (e) { return null; }
+  }
+  function saveSession(session) {
+    if (session) localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+    else localStorage.removeItem(SESSION_KEY);
+  }
+
+  var cartDrawer = document.getElementById('gpu-cart-drawer');
+  var cartBackdrop = document.getElementById('gpu-cart-backdrop');
+  var cartBody = document.getElementById('gpu-cart-body');
+  var cartTotalEl = document.getElementById('gpu-cart-total');
+  var cartCountEl = document.getElementById('gpu-cart-count');
+  var checkoutBtn = document.getElementById('gpu-checkout-btn');
+  var authModal = document.getElementById('gpu-auth-modal');
+  var authForm = document.getElementById('gpu-auth-form');
+  var authBtn = document.getElementById('gpu-auth-btn');
+  var accountLabel = document.getElementById('gpu-account-label');
+  var invoiceModal = document.getElementById('gpu-invoice-modal');
+  var invoiceContent = document.getElementById('gpu-invoice-content');
+  var toastEl = document.getElementById('gpu-toast');
+  var pendingCheckout = false;
+  var toastTimer;
+
+  function showToast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('is-visible'); }, 2800);
+  }
+
+  function cartTotal(items) {
+    return items.reduce(function (sum, it) { return sum + (it.priceRub * (it.qty || 1)); }, 0);
+  }
+
+  function renderCart() {
+    var items = loadCart();
+    if (cartCountEl) {
+      var count = items.reduce(function (n, it) { return n + (it.qty || 1); }, 0);
+      cartCountEl.textContent = String(count);
+      cartCountEl.hidden = count === 0;
+    }
+    if (cartTotalEl) cartTotalEl.textContent = fmtRub(cartTotal(items));
+    if (checkoutBtn) checkoutBtn.disabled = items.length === 0;
+
+    if (!cartBody) return;
+    if (!items.length) {
+      cartBody.innerHTML = '<p class="gpu-cart-empty">Корзина пуста. Добавьте конфигурацию из каталога.</p>';
+      return;
+    }
+    cartBody.innerHTML = items.map(function (it) {
+      return '<article class="gpu-cart-item" data-cart-id="' + it.id + '">' +
+        '<p class="gpu-cart-item-name">' + escapeHtml(it.name) + '</p>' +
+        '<p class="gpu-cart-item-meta">1 month · ' + fmtRub(it.priceHour) + '/hr · ' + Number(it.priceByn).toLocaleString('ru-RU') + ' BYN</p>' +
+        '<div class="gpu-cart-item-row">' +
+          '<span class="gpu-cart-item-price">' + fmtRub(it.priceRub) + '</span>' +
+          '<button type="button" class="gpu-cart-remove" data-remove-cart="' + it.id + '">Remove</button>' +
+        '</div></article>';
+    }).join('');
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function openCart() {
+    renderCart();
+    cartDrawer.hidden = false;
+    cartBackdrop.hidden = false;
+    requestAnimationFrame(function () { cartDrawer.classList.add('is-open'); });
+    document.body.style.overflow = 'hidden';
+  }
+  function closeCart() {
+    cartDrawer.classList.remove('is-open');
+    cartBackdrop.hidden = true;
+    document.body.style.overflow = '';
+    setTimeout(function () { cartDrawer.hidden = true; }, 220);
+  }
+
+  function openAuth() {
+    var session = loadSession();
+    if (session) {
+      document.getElementById('gpu-auth-email').value = session.email || '';
+      document.getElementById('gpu-auth-company').value = session.company || '';
+      document.getElementById('gpu-auth-inn').value = session.inn || '';
+    }
+    authModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAuth() {
+    authModal.hidden = true;
+    if (cartDrawer.hidden && invoiceModal.hidden) document.body.style.overflow = '';
+  }
+
+  function closeInvoice() {
+    invoiceModal.hidden = true;
+    if (cartDrawer.hidden && authModal.hidden) document.body.style.overflow = '';
+  }
+
+  function updateAuthUI() {
+    var session = loadSession();
+    if (session && session.email) {
+      if (accountLabel) {
+        accountLabel.textContent = session.company || session.email;
+        accountLabel.hidden = false;
+      }
+      if (authBtn) authBtn.textContent = 'Sign Out';
+    } else {
+      if (accountLabel) accountLabel.hidden = true;
+      if (authBtn) authBtn.textContent = 'Sign In';
+    }
+  }
+
+  function addFromRow(row) {
+    if (row.getAttribute('data-status') === 'no') return;
+    var id = row.getAttribute('data-id');
+    var items = loadCart();
+    if (items.some(function (it) { return it.id === id; })) {
+      showToast('Already in cart');
+      openCart();
+      return;
+    }
+    items.push({
+      id: id,
+      name: row.getAttribute('data-name'),
+      priceRub: Number(row.getAttribute('data-price-rub')),
+      priceByn: Number(row.getAttribute('data-price-byn')),
+      priceHour: Number(row.getAttribute('data-price-hour')),
+      qty: 1
+    });
+    saveCart(items);
+    renderCart();
+    showToast('Added to cart');
+    openCart();
+  }
+
+  function removeFromCart(id) {
+    saveCart(loadCart().filter(function (it) { return it.id !== id; }));
+    renderCart();
+  }
+
+  function invoiceNumber() {
+    var d = new Date();
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    return 'INV-WEC-' + d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) + '-' + String(Math.floor(Math.random() * 9000) + 1000);
+  }
+
+  function generateInvoice() {
+    var items = loadCart();
+    var session = loadSession();
+    if (!items.length) return;
+    if (!session || !session.email) {
+      pendingCheckout = true;
+      openAuth();
+      return;
+    }
+
+    var invNo = invoiceNumber();
+    var dateStr = new Date().toLocaleDateString('ru-RU', { day: '2-digit', month: 'long', year: 'numeric' });
+    var total = cartTotal(items);
+    var lines = items.map(function (it) {
+      return '<tr><td>' + escapeHtml(it.name) + '</td><td>1 mo</td><td class="num">' + fmtRub(it.priceRub) + '</td></tr>';
+    }).join('');
+
+    invoiceContent.innerHTML =
+      '<h3>' + invNo + '</h3>' +
+      '<p style="margin:0 0 12px;color:#64748b">Date: ' + dateStr + '</p>' +
+      '<p style="margin:0 0 4px"><strong>Bill to:</strong> ' + escapeHtml(session.company) + '</p>' +
+      '<p style="margin:0 0 4px">' + escapeHtml(session.email) + '</p>' +
+      (session.inn ? '<p style="margin:0 0 12px">ИНН: ' + escapeHtml(session.inn) + '</p>' : '<p style="margin:0 0 12px"></p>') +
+      '<p style="margin:0 0 12px"><strong>Supplier:</strong> ОсОО «ВЕСТ-ИСТ ТРЕЙД» (WEST-EAST CLOUD)<br>Бишкек, пр. Чынгыза Айтматова, 16 · ИНН 02711202310217</p>' +
+      '<table class="gpu-invoice-lines"><thead><tr><th>Configuration</th><th>Term</th><th>Amount</th></tr></thead><tbody>' + lines + '</tbody></table>' +
+      '<p class="gpu-invoice-total">Total due: ' + fmtRub(total) + '</p>' +
+      '<p style="margin:12px 0 0;font-size:12px;color:#64748b">Payment: bank transfer RUB / BYN / CNY or USDT. Reference: <strong>' + invNo + '</strong>. Provisioning starts after payment confirmation.</p>';
+
+    saveCart([]);
+    renderCart();
+    closeCart();
+    invoiceModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    showToast('Invoice ' + invNo + ' generated');
+  }
+
+  document.querySelectorAll('[data-open-cart]').forEach(function (btn) {
+    btn.addEventListener('click', openCart);
+  });
+  document.querySelectorAll('[data-close-cart]').forEach(function (btn) {
+    btn.addEventListener('click', closeCart);
+  });
+  if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+
+  document.querySelectorAll('[data-open-auth]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var session = loadSession();
+      if (session && session.email) {
+        saveSession(null);
+        updateAuthUI();
+        showToast('Signed out');
+      } else {
+        openAuth();
+      }
+    });
+  });
+  document.querySelectorAll('[data-close-auth]').forEach(function (btn) {
+    btn.addEventListener('click', closeAuth);
+  });
+  document.querySelectorAll('[data-close-invoice]').forEach(function (btn) {
+    btn.addEventListener('click', closeInvoice);
+  });
+
+  if (authForm) {
+    authForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var session = {
+        email: document.getElementById('gpu-auth-email').value.trim(),
+        company: document.getElementById('gpu-auth-company').value.trim(),
+        inn: document.getElementById('gpu-auth-inn').value.trim(),
+        signedInAt: Date.now()
+      };
+      saveSession(session);
+      updateAuthUI();
+      closeAuth();
+      showToast('Signed in as ' + session.company);
+      if (pendingCheckout) {
+        pendingCheckout = false;
+        generateInvoice();
+      }
+    });
+  }
+
+  if (checkoutBtn) checkoutBtn.addEventListener('click', generateInvoice);
+
+  document.getElementById('gpu-invoice-print').addEventListener('click', function () {
+    var w = window.open('', '_blank');
+    if (!w) return;
+    w.document.write('<html><head><title>Invoice</title><style>body{font-family:Inter,sans-serif;padding:24px;font-size:13px}table{width:100%;border-collapse:collapse}td,th{padding:8px 0;border-bottom:1px solid #e2e8f0;text-align:left}</style></head><body>' + invoiceContent.innerHTML + '</body></html>');
+    w.document.close();
+    w.print();
+  });
+
+  document.querySelectorAll('[data-add-cart]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var row = btn.closest('tr');
+      if (row) addFromRow(row);
+    });
+  });
+
+  if (cartBody) {
+    cartBody.addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-remove-cart]');
+      if (btn) removeFromCart(btn.getAttribute('data-remove-cart'));
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!cartDrawer.hidden) closeCart();
+    else if (!authModal.hidden) closeAuth();
+    else if (!invoiceModal.hidden) closeInvoice();
+  });
+
+  var modelSel = document.getElementById('gpu-filter-model');
+  var regionSel = document.getElementById('gpu-filter-region');
+  var statusSel = document.getElementById('gpu-filter-status');
+  var countEl = document.getElementById('gpu-row-count');
+  var rows = document.querySelectorAll('#gpu-pricing-table tbody tr');
+
+  function applyFilters() {
+    var model = modelSel.value;
+    var region = regionSel.value;
+    var status = statusSel.value;
+    var n = 0;
+    rows.forEach(function (row) {
+      var okModel = model === 'all' || row.getAttribute('data-model') === model;
+      var okRegion = region === 'all' || row.getAttribute('data-region') === region;
+      var rowStatus = row.getAttribute('data-status');
+      var okStatus = status === 'all' || (status === 'available' && rowStatus !== 'no');
+      var show = okModel && okRegion && okStatus;
+      row.hidden = !show;
+      if (show) n++;
+    });
+    if (countEl) countEl.textContent = String(n);
+  }
+  [modelSel, regionSel, statusSel].forEach(function (el) {
+    if (el) el.addEventListener('change', applyFilters);
+  });
+  applyFilters();
+
+  var toggle = document.getElementById('gpu-menu-toggle');
+  var nav = document.getElementById('gpu-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  renderCart();
+  updateAuthUI();
+})();
+</script>
+
+</body>
+</html>
