@@ -1,9 +1,12 @@
-# Deploy static site to GitHub Pages (Settings → Pages → Source: GitHub Actions)
+# Deploy static site to GitHub Pages
+# Pages → Source: GitHub Actions
+# Деплой с main (разрешён в environment github-pages).
+# Чтобы деплоить с west-east: Settings → Environments → github-pages → Deployment branches → west-east
 name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["main", "west-east"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
