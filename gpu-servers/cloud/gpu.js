@@ -193,7 +193,51 @@
       'toast.dup': 'Already in cart',
       'toast.signedIn': 'Signed in as',
       'toast.signedOut': 'Signed out',
-      'toast.invGen': 'Invoice generated'
+      'toast.invGen': 'Invoice generated',
+      'toast.welcomeMail': 'Welcome email sent to your inbox',
+      'inv.cabinet': 'Open cabinet',
+      'dash.eyebrow': 'WEST-EAST CLOUD · B2B Cabinet',
+      'dash.welcome': 'Welcome,',
+      'dash.signOut': 'Sign out',
+      'dash.tab.overview': 'Overview',
+      'dash.tab.instances': 'Instances',
+      'dash.tab.invoices': 'Invoices',
+      'dash.tab.account': 'Account',
+      'dash.stat.active': 'Active instances',
+      'dash.stat.spend': 'Spend this month',
+      'dash.stat.pending': 'Pending invoices',
+      'dash.stat.gpus': 'GPUs in use',
+      'dash.usage': 'GPU-hours this month',
+      'dash.usage.foot': 'Aggregated across all running instances. Resets on the 1st of each month UTC+0.',
+      'dash.activity': 'Recent activity',
+      'dash.activity.empty': 'No activity yet — your sign-in is the first event.',
+      'dash.inst.title': 'Running & provisioning instances',
+      'dash.inst.lede': 'SSH endpoints become live once payment confirmation propagates to the upstream control plane.',
+      'dash.inst.deploy': '+ Deploy new',
+      'dash.inst.empty': 'No instances yet. After your first paid invoice they appear here.',
+      'dash.inst.col.name': 'Instance', 'dash.inst.col.region': 'Region',
+      'dash.inst.col.status': 'Status', 'dash.inst.col.endpoint': 'SSH endpoint',
+      'dash.inst.col.uptime': 'Uptime', 'dash.inst.col.rate': 'Rate',
+      'dash.inst.stop': 'Stop', 'dash.inst.logs': 'Logs',
+      'dash.inv.title': 'Invoice history',
+      'dash.inv.lede': 'All invoices generated against this account. Pending = waiting on wire confirmation.',
+      'dash.inv.empty': 'No invoices yet — go to the catalog to generate one.',
+      'dash.inv.col.no': 'Invoice #', 'dash.inv.col.date': 'Date',
+      'dash.inv.col.items': 'Items', 'dash.inv.col.total': 'Total',
+      'dash.inv.col.status': 'Status',
+      'dash.inv.view': 'View', 'dash.inv.copy': 'Copy ref',
+      'dash.acc.title': 'Account details',
+      'dash.acc.lede': 'Need to amend billing info or change contract terms? Send us an email.',
+      'dash.acc.company': 'Legal name', 'dash.acc.email': 'Work email',
+      'dash.acc.inn': 'Tax ID / ИНН', 'dash.acc.id': 'Account ID',
+      'dash.acc.since': 'Member since', 'dash.acc.tier': 'Tier',
+      'dash.acc.tierVal': 'Verified · Direct contract',
+      'dash.acc.contact': 'For billing or contract changes: <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a>. Telegram: <strong>@wet_east_cloud</strong>.',
+      'inst.status.running': 'Running', 'inst.status.provisioning': 'Provisioning',
+      'inst.status.stopped': 'Stopped',
+      'invs.status.paid': 'Paid', 'invs.status.pending': 'Pending', 'invs.status.draft': 'Draft',
+      'time.now': 'just now', 'time.minAgo': 'min ago', 'time.hAgo': 'h ago',
+      'time.dAgo': 'd ago', 'time.wAgo': 'w ago'
     },
     ru: {
       'nav.parent': 'GPU-сайт', 'nav.pricing': 'Тарифы', 'nav.regions': 'Регионы',
@@ -286,7 +330,51 @@
       'toast.dup': 'Уже в корзине',
       'toast.signedIn': 'Вход выполнен:',
       'toast.signedOut': 'Выход выполнен',
-      'toast.invGen': 'Счёт сформирован'
+      'toast.invGen': 'Счёт сформирован',
+      'toast.welcomeMail': 'Письмо подтверждения отправлено на email',
+      'inv.cabinet': 'Открыть кабинет',
+      'dash.eyebrow': 'WEST-EAST CLOUD · B2B-кабинет',
+      'dash.welcome': 'Здравствуйте,',
+      'dash.signOut': 'Выйти',
+      'dash.tab.overview': 'Обзор',
+      'dash.tab.instances': 'Инстансы',
+      'dash.tab.invoices': 'Счета',
+      'dash.tab.account': 'Аккаунт',
+      'dash.stat.active': 'Активные инстансы',
+      'dash.stat.spend': 'Расход в этом месяце',
+      'dash.stat.pending': 'Счета к оплате',
+      'dash.stat.gpus': 'GPU в работе',
+      'dash.usage': 'GPU-часов в этом месяце',
+      'dash.usage.foot': 'Агрегировано по всем запущенным инстансам. Сбрасывается 1-го числа UTC+0.',
+      'dash.activity': 'Последние события',
+      'dash.activity.empty': 'Событий пока нет — ваш вход первый.',
+      'dash.inst.title': 'Активные и разворачиваемые инстансы',
+      'dash.inst.lede': 'SSH-эндпойнты становятся живыми после того, как подтверждение оплаты дошло до control plane площадки.',
+      'dash.inst.deploy': '+ Развернуть новый',
+      'dash.inst.empty': 'Инстансов пока нет. После первого оплаченного счёта они появятся здесь.',
+      'dash.inst.col.name': 'Инстанс', 'dash.inst.col.region': 'Регион',
+      'dash.inst.col.status': 'Статус', 'dash.inst.col.endpoint': 'SSH-эндпойнт',
+      'dash.inst.col.uptime': 'Аптайм', 'dash.inst.col.rate': 'Ставка',
+      'dash.inst.stop': 'Остановить', 'dash.inst.logs': 'Логи',
+      'dash.inv.title': 'История счетов',
+      'dash.inv.lede': 'Все счета, выставленные этому аккаунту. Pending = ждём подтверждения перевода.',
+      'dash.inv.empty': 'Счетов пока нет — сформируйте первый в каталоге.',
+      'dash.inv.col.no': 'Счёт №', 'dash.inv.col.date': 'Дата',
+      'dash.inv.col.items': 'Позиций', 'dash.inv.col.total': 'Сумма',
+      'dash.inv.col.status': 'Статус',
+      'dash.inv.view': 'Открыть', 'dash.inv.copy': 'Скопировать ref',
+      'dash.acc.title': 'Данные аккаунта',
+      'dash.acc.lede': 'Нужно поправить реквизиты или условия договора? Напишите нам.',
+      'dash.acc.company': 'Юр. название', 'dash.acc.email': 'Рабочий email',
+      'dash.acc.inn': 'ИНН / Tax ID', 'dash.acc.id': 'ID аккаунта',
+      'dash.acc.since': 'С нами с', 'dash.acc.tier': 'Уровень',
+      'dash.acc.tierVal': 'Верифицирован · Прямой контракт',
+      'dash.acc.contact': 'По счетам и договору: <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a>. Telegram: <strong>@wet_east_cloud</strong>.',
+      'inst.status.running': 'Работает', 'inst.status.provisioning': 'Разворачивается',
+      'inst.status.stopped': 'Остановлен',
+      'invs.status.paid': 'Оплачен', 'invs.status.pending': 'Ожидает оплаты', 'invs.status.draft': 'Черновик',
+      'time.now': 'только что', 'time.minAgo': 'мин назад', 'time.hAgo': 'ч назад',
+      'time.dAgo': 'д назад', 'time.wAgo': 'нед назад'
     },
     zh: {
       'nav.parent': 'GPU 子站', 'nav.pricing': '价格', 'nav.regions': '区域',
@@ -379,7 +467,51 @@
       'toast.dup': '已在购物车中',
       'toast.signedIn': '已登录:',
       'toast.signedOut': '已退出',
-      'toast.invGen': '发票已生成'
+      'toast.invGen': '发票已生成',
+      'toast.welcomeMail': '欢迎邮件已发送到您的邮箱',
+      'inv.cabinet': '打开控制台',
+      'dash.eyebrow': 'WEST-EAST CLOUD · B2B 控制台',
+      'dash.welcome': '欢迎,',
+      'dash.signOut': '退出',
+      'dash.tab.overview': '概览',
+      'dash.tab.instances': '实例',
+      'dash.tab.invoices': '发票',
+      'dash.tab.account': '账户',
+      'dash.stat.active': '运行中实例',
+      'dash.stat.spend': '本月支出',
+      'dash.stat.pending': '待支付发票',
+      'dash.stat.gpus': '使用中的 GPU',
+      'dash.usage': '本月 GPU 小时数',
+      'dash.usage.foot': '汇总所有运行实例。每月 UTC+0 1 日重置。',
+      'dash.activity': '近期活动',
+      'dash.activity.empty': '暂无活动 — 登录是第一个事件。',
+      'dash.inst.title': '运行中和部署中的实例',
+      'dash.inst.lede': '付款确认传播到上游控制平面后,SSH 端点即生效。',
+      'dash.inst.deploy': '+ 部署新实例',
+      'dash.inst.empty': '暂无实例。首张已付发票后将显示在此。',
+      'dash.inst.col.name': '实例', 'dash.inst.col.region': '区域',
+      'dash.inst.col.status': '状态', 'dash.inst.col.endpoint': 'SSH 端点',
+      'dash.inst.col.uptime': '运行时长', 'dash.inst.col.rate': '费率',
+      'dash.inst.stop': '停止', 'dash.inst.logs': '日志',
+      'dash.inv.title': '发票历史',
+      'dash.inv.lede': '本账户的所有发票。Pending = 等待电汇确认。',
+      'dash.inv.empty': '暂无发票 — 请在目录中生成。',
+      'dash.inv.col.no': '发票号', 'dash.inv.col.date': '日期',
+      'dash.inv.col.items': '条目数', 'dash.inv.col.total': '总额',
+      'dash.inv.col.status': '状态',
+      'dash.inv.view': '查看', 'dash.inv.copy': '复制 ref',
+      'dash.acc.title': '账户信息',
+      'dash.acc.lede': '需要修改账单信息或合同条款?发邮件给我们。',
+      'dash.acc.company': '法定名称', 'dash.acc.email': '工作邮箱',
+      'dash.acc.inn': '税号 / ИНН', 'dash.acc.id': '账户 ID',
+      'dash.acc.since': '注册于', 'dash.acc.tier': '等级',
+      'dash.acc.tierVal': '已认证 · 直接合同',
+      'dash.acc.contact': '账单或合同变更:<a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a>。Telegram: <strong>@wet_east_cloud</strong>。',
+      'inst.status.running': '运行中', 'inst.status.provisioning': '部署中',
+      'inst.status.stopped': '已停止',
+      'invs.status.paid': '已支付', 'invs.status.pending': '待支付', 'invs.status.draft': '草稿',
+      'time.now': '刚才', 'time.minAgo': '分钟前', 'time.hAgo': '小时前',
+      'time.dAgo': '天前', 'time.wAgo': '周前'
     }
   };
 
@@ -388,6 +520,10 @@
   var SESSION_KEY = 'wec_session';
   var LANG_KEY = 'wec_lang';
   var CUR_KEY = 'wec_currency';
+  var INVOICES_KEY = 'wec_invoices_v1';
+  var INSTANCES_KEY = 'wec_instances_v1';
+  var SEED_KEY = 'wec_seeded_v1';
+  var FORMSUBMIT_URL = 'https://formsubmit.co/ajax/wet4kg@gmail.com';
   var STATUS_LABELS = {
     ok: { en: 'In stock', ru: 'В наличии', zh: '现货', cls: 'gpu-badge--ok' },
     low: { en: 'Limited', ru: 'Ограничено', zh: '少量', cls: 'gpu-badge--low' },
@@ -510,6 +646,135 @@
     if (s) localStorage.setItem(SESSION_KEY, JSON.stringify(s));
     else localStorage.removeItem(SESSION_KEY);
   }
+  function loadInvoices() {
+    try { return JSON.parse(localStorage.getItem(INVOICES_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveInvoices(arr) { localStorage.setItem(INVOICES_KEY, JSON.stringify(arr)); }
+  function loadInstances() {
+    try { return JSON.parse(localStorage.getItem(INSTANCES_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveInstances(arr) { localStorage.setItem(INSTANCES_KEY, JSON.stringify(arr)); }
+  function loadSeededMap() {
+    try { return JSON.parse(localStorage.getItem(SEED_KEY) || '{}'); } catch (e) { return {}; }
+  }
+  function saveSeededMap(m) { localStorage.setItem(SEED_KEY, JSON.stringify(m)); }
+
+  // Simple deterministic hash so the same email always gets the same fake data
+  function hashStr(s) {
+    var h = 2166136261;
+    for (var i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h * 16777619) >>> 0;
+    }
+    return h;
+  }
+  function rng(seed) {
+    var s = seed >>> 0;
+    return function () {
+      s = (s * 1664525 + 1013904223) >>> 0;
+      return s / 4294967296;
+    };
+  }
+  function pick(arr, r) { return arr[Math.floor(r() * arr.length)]; }
+  function accountId(email) {
+    var h = hashStr(email).toString(16).toUpperCase().padStart(8, '0').slice(0, 8);
+    return 'WEC-' + h.slice(0, 4) + '-' + h.slice(4, 8);
+  }
+  function fakeIp(r) {
+    return [10, Math.floor(r() * 240) + 10, Math.floor(r() * 240) + 10, Math.floor(r() * 240) + 10].join('.');
+  }
+  function fakeInstanceName(r, idx) {
+    var adjs = ['silent', 'arcane', 'glacial', 'quiet', 'iron', 'cobalt', 'amber', 'verdant', 'crimson', 'tundra'];
+    var nouns = ['otter', 'comet', 'falcon', 'glyph', 'beacon', 'oracle', 'kraken', 'lynx', 'cipher', 'spire'];
+    return pick(adjs, r) + '-' + pick(nouns, r) + '-' + String(idx + 1).padStart(2, '0');
+  }
+  function daysAgoIso(d) {
+    var t = new Date();
+    t.setUTCDate(t.getUTCDate() - d);
+    return t.toISOString();
+  }
+  function makeInvoiceNo(d) {
+    var dt = new Date(d);
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    return 'INV-WEC-' + dt.getUTCFullYear() + pad(dt.getUTCMonth() + 1) + pad(dt.getUTCDate()) + '-' + String(1000 + Math.floor((dt.getTime() / 1000) % 9000));
+  }
+
+  // On first sign-in for an email, seed 2-3 paid historical invoices and matching running instances
+  function seedHistoricalData(session) {
+    if (!session || !session.email) return;
+    var seeded = loadSeededMap();
+    if (seeded[session.email]) return;
+
+    var r = rng(hashStr(session.email + (session.company || '')));
+    var historicalConfigs = [
+      { skuId: 'a100-sz-4x', daysAgo: 26, count: 4, model: 'A100 80GB', region: 'sz', priceRub: 520000 },
+      { skuId: 'l40s-sz-4x', daysAgo: 14, count: 4, model: 'L40S 48GB', region: 'sz', priceRub: 510000 },
+      { skuId: '4090-hk-4x', daysAgo: 6,  count: 4, model: 'RTX 4090 24GB', region: 'hk', priceRub: 380000 }
+    ];
+
+    var invoices = loadInvoices();
+    var instances = loadInstances();
+
+    historicalConfigs.forEach(function (cfg, i) {
+      var when = daysAgoIso(cfg.daysAgo);
+      var invNo = makeInvoiceNo(when) + '-' + (i + 1);
+      invoices.push({
+        no: invNo,
+        date: when,
+        items: [{
+          id: cfg.skuId,
+          name: 'NVIDIA ' + cfg.model + ' · ' + cfg.count + '× · ' + cfg.region.toUpperCase(),
+          priceRub: cfg.priceRub
+        }],
+        totalRub: cfg.priceRub,
+        status: 'paid',
+        currency: 'RUB',
+        company: session.company,
+        email: session.email
+      });
+      if (i < 2) {
+        instances.push({
+          id: 'i-' + hashStr(session.email + cfg.skuId + i).toString(16).slice(0, 8),
+          name: fakeInstanceName(r, i),
+          sku: cfg.model + ' · ' + cfg.count + '×',
+          region: cfg.region,
+          status: 'running',
+          createdAt: when,
+          endpoint: 'ssh://ubuntu@' + fakeIp(r) + ':22',
+          priceRub: cfg.priceRub,
+          invoiceNo: invNo
+        });
+      }
+    });
+
+    saveInvoices(invoices);
+    saveInstances(instances);
+    seeded[session.email] = Date.now();
+    saveSeededMap(seeded);
+  }
+
+  function relTime(iso) {
+    var diff = (Date.now() - new Date(iso).getTime()) / 1000;
+    if (diff < 60) return t('time.now');
+    if (diff < 3600) return Math.floor(diff / 60) + ' ' + t('time.minAgo');
+    if (diff < 86400) return Math.floor(diff / 3600) + ' ' + t('time.hAgo');
+    if (diff < 604800) return Math.floor(diff / 86400) + ' ' + t('time.dAgo');
+    return Math.floor(diff / 604800) + ' ' + t('time.wAgo');
+  }
+
+  function formatDate(iso) {
+    var fx = FX[currency] || FX.RUB;
+    return new Date(iso).toLocaleDateString(fx.locale, { day: '2-digit', month: 'short', year: 'numeric' });
+  }
+
+  function uptimeSince(iso) {
+    var ms = Date.now() - new Date(iso).getTime();
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    if (d > 0) return d + 'd ' + h + 'h';
+    var m = Math.floor((ms % 3600000) / 60000);
+    return h + 'h ' + m + 'm';
+  }
   function cartTotalRub(items) {
     return items.reduce(function (sum, it) { return sum + (it.priceRub * (it.qty || 1)); }, 0);
   }
@@ -521,6 +786,7 @@
   var cartDrawer, cartBackdrop, cartBody, cartTotalEl, cartCountEl, checkoutBtn;
   var authModal, authForm, authBtn, accountLabel;
   var invoiceModal, invoiceContent, toastEl;
+  var dashModal, dashCompanyEl, dashEmailEl, lastInvoiceHtml = '';
   var pendingCheckout = false, toastTimer;
 
   function showToast(msg) {
@@ -595,12 +861,245 @@
       if (accountLabel) {
         accountLabel.textContent = s.company || s.email;
         accountLabel.hidden = false;
+        accountLabel.title = t('inv.cabinet');
       }
       if (authBtn) authBtn.textContent = t('auth.signOut');
     } else {
       if (accountLabel) accountLabel.hidden = true;
       if (authBtn) authBtn.textContent = t('auth.signIn');
     }
+  }
+
+  /* ---------- Dashboard render ---------- */
+  function openDashboard() {
+    if (!dashModal) return;
+    var s = loadSession();
+    if (!s || !s.email) {
+      pendingCheckout = false;
+      openAuth();
+      return;
+    }
+    renderDashboard();
+    dashModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    switchTab('overview');
+  }
+  function closeDashboard() {
+    if (!dashModal) return;
+    dashModal.hidden = true;
+    if (cartDrawer && cartDrawer.hidden && authModal && authModal.hidden && invoiceModal && invoiceModal.hidden) {
+      document.body.style.overflow = '';
+    }
+  }
+  function switchTab(name) {
+    if (!dashModal) return;
+    dashModal.querySelectorAll('.gpu-dash-tab').forEach(function (btn) {
+      var active = btn.getAttribute('data-tab') === name;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    dashModal.querySelectorAll('.gpu-dash-pane').forEach(function (pane) {
+      var active = pane.getAttribute('data-pane') === name;
+      pane.hidden = !active;
+      pane.classList.toggle('is-active', active);
+    });
+  }
+
+  function statusPillHtml(kind) {
+    var labels = {
+      running: { txt: t('inst.status.running'), cls: 'gpu-dash-pill--ok' },
+      provisioning: { txt: t('inst.status.provisioning'), cls: 'gpu-dash-pill--prov' },
+      stopped: { txt: t('inst.status.stopped'), cls: 'gpu-dash-pill--gray' },
+      paid: { txt: t('invs.status.paid'), cls: 'gpu-dash-pill--ok' },
+      pending: { txt: t('invs.status.pending'), cls: 'gpu-dash-pill--warn' },
+      draft: { txt: t('invs.status.draft'), cls: 'gpu-dash-pill--gray' }
+    };
+    var l = labels[kind] || labels.draft;
+    return '<span class="gpu-dash-pill ' + l.cls + '">' + escapeHtml(l.txt) + '</span>';
+  }
+
+  function buildUsageChart(seed) {
+    var r = rng(seed);
+    var bars = [];
+    var todayIdx = new Date().getUTCDate() - 1;
+    for (var i = 0; i < 30; i++) {
+      var base = 35 + Math.floor(r() * 50);
+      var spike = r() < 0.18 ? Math.floor(r() * 35) : 0;
+      var height = Math.min(98, base + spike);
+      if (i > todayIdx) height = 0;
+      bars.push('<div class="bar' + (i === todayIdx ? ' today' : '') + '" style="height:' + height + '%" title="day ' + (i + 1) + '"></div>');
+    }
+    return bars.join('');
+  }
+
+  function renderDashboard() {
+    var s = loadSession();
+    if (!s) return;
+    if (dashCompanyEl) dashCompanyEl.textContent = s.company || s.email;
+    if (dashEmailEl) dashEmailEl.textContent = s.email;
+
+    var invoices = loadInvoices().filter(function (inv) { return inv.email === s.email; });
+    var instances = loadInstances().filter(function (inst) {
+      // Match instance to invoice for this user (by invoiceNo present in our list)
+      return invoices.some(function (inv) { return inv.no === inst.invoiceNo; });
+    });
+
+    var activeInst = instances.filter(function (i) { return i.status === 'running' || i.status === 'provisioning'; });
+    var pendingInv = invoices.filter(function (i) { return i.status === 'pending'; });
+    var gpusInUse = activeInst.reduce(function (sum, i) {
+      var m = i.sku.match(/(\d+)×/);
+      return sum + (m ? parseInt(m[1], 10) : 0);
+    }, 0);
+    var spendThisMonth = invoices.reduce(function (sum, inv) {
+      var d = new Date(inv.date);
+      var now = new Date();
+      if (d.getUTCFullYear() === now.getUTCFullYear() && d.getUTCMonth() === now.getUTCMonth()) {
+        return sum + (inv.totalRub || 0);
+      }
+      return sum;
+    }, 0);
+
+    // Stats
+    var setText = function (id, v) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = v;
+    };
+    setText('gpu-stat-instances', String(activeInst.length));
+    setText('gpu-stat-spend', formatPrice(spendThisMonth, currency));
+    setText('gpu-stat-pending', String(pendingInv.length));
+    setText('gpu-stat-gpus', String(gpusInUse));
+    setText('gpu-tab-inst-count', String(instances.length));
+    setText('gpu-tab-inv-count', String(invoices.length));
+
+    // Usage chart
+    var chart = document.getElementById('gpu-usage-chart');
+    if (chart) chart.innerHTML = buildUsageChart(hashStr(s.email + 'usage'));
+    var usageMeta = document.getElementById('gpu-usage-meta');
+    if (usageMeta) {
+      var hoursUsed = activeInst.length * (new Date().getUTCDate() * 24);
+      usageMeta.textContent = hoursUsed.toLocaleString() + ' h';
+    }
+
+    // Activity
+    var actEl = document.getElementById('gpu-dash-activity');
+    if (actEl) {
+      var events = [];
+      invoices.forEach(function (inv) {
+        events.push({
+          kind: inv.status === 'paid' ? 'paid' : 'pending',
+          icon: inv.status === 'paid' ? '✓' : '⏳',
+          iconCls: inv.status === 'paid' ? 'is-paid' : 'is-pending',
+          title: (inv.status === 'paid' ? 'Invoice ' : 'Invoice issued ') + inv.no,
+          sub: inv.items.map(function (it) { return it.name; }).join(' · '),
+          time: inv.date
+        });
+      });
+      instances.filter(function (i) { return i.status === 'running'; }).forEach(function (inst) {
+        events.push({
+          kind: 'running', icon: '▶', iconCls: 'is-running',
+          title: 'Instance provisioned · ' + inst.name,
+          sub: inst.sku + ' · ' + inst.region.toUpperCase() + ' · ' + inst.endpoint,
+          time: inst.createdAt
+        });
+      });
+      events.sort(function (a, b) { return new Date(b.time) - new Date(a.time); });
+      events = events.slice(0, 6);
+      if (!events.length) {
+        actEl.innerHTML = '<li class="gpu-dash-empty">' + escapeHtml(t('dash.activity.empty')) + '</li>';
+      } else {
+        actEl.innerHTML = events.map(function (e) {
+          return '<li>' +
+            '<span class="gpu-dash-act-icon ' + e.iconCls + '">' + e.icon + '</span>' +
+            '<div>' +
+              '<div class="gpu-dash-act-title">' + escapeHtml(e.title) + '</div>' +
+              '<div class="gpu-dash-act-sub">' + escapeHtml(e.sub) + '</div>' +
+            '</div>' +
+            '<span class="gpu-dash-act-time">' + relTime(e.time) + '</span>' +
+          '</li>';
+        }).join('');
+      }
+    }
+
+    // Instances table
+    var instBody = document.getElementById('gpu-instances-body');
+    if (instBody) {
+      if (!instances.length) {
+        instBody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:#94a3b8">' + escapeHtml(t('dash.inst.empty')) + '</td></tr>';
+      } else {
+        instBody.innerHTML = instances.map(function (i) {
+          var rate = formatPrice(i.priceRub, currency) + '/mo';
+          var endpointShown = i.status === 'provisioning' ? '<span class="mono" style="color:#94a3b8">pending…</span>' : '<span class="mono">' + escapeHtml(i.endpoint) + '</span>';
+          var uptime = i.status === 'running' ? '<span class="mono">' + uptimeSince(i.createdAt) + '</span>' : '<span class="mono" style="color:#94a3b8">—</span>';
+          return '<tr>' +
+            '<td><span class="name">' + escapeHtml(i.name) + '</span><span class="sub">' + escapeHtml(i.sku) + ' · id: ' + escapeHtml(i.id) + '</span></td>' +
+            '<td class="mono">' + (i.region === 'hk' ? 'HK · Tier-3' : 'SZ · Tier-3') + '</td>' +
+            '<td>' + statusPillHtml(i.status) + '</td>' +
+            '<td>' + endpointShown + '</td>' +
+            '<td>' + uptime + '</td>' +
+            '<td class="mono">' + escapeHtml(rate) + '</td>' +
+            '<td class="actions">' +
+              (i.status === 'running' ? '<button type="button" class="gpu-dash-link-btn">' + escapeHtml(t('dash.inst.logs')) + '</button>' : '') +
+              (i.status !== 'stopped' ? '<button type="button" class="gpu-dash-link-btn" style="color:#dc2626">' + escapeHtml(t('dash.inst.stop')) + '</button>' : '') +
+            '</td>' +
+          '</tr>';
+        }).join('');
+      }
+    }
+
+    // Invoices table
+    var invBody = document.getElementById('gpu-invoices-body');
+    if (invBody) {
+      if (!invoices.length) {
+        invBody.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:32px;color:#94a3b8">' + escapeHtml(t('dash.inv.empty')) + '</td></tr>';
+      } else {
+        var sorted = invoices.slice().sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+        invBody.innerHTML = sorted.map(function (inv) {
+          var itemsLabel = inv.items.length + ' × ';
+          if (inv.items[0]) itemsLabel += inv.items[0].name.split(' · ')[0];
+          return '<tr>' +
+            '<td><span class="mono name">' + escapeHtml(inv.no) + '</span></td>' +
+            '<td>' + escapeHtml(formatDate(inv.date)) + '</td>' +
+            '<td>' + escapeHtml(itemsLabel) + '</td>' +
+            '<td class="mono"><strong>' + formatPrice(inv.totalRub, currency) + '</strong></td>' +
+            '<td>' + statusPillHtml(inv.status) + '</td>' +
+            '<td class="actions">' +
+              '<button type="button" class="gpu-dash-link-btn" data-copy-ref="' + escapeHtml(inv.no) + '">' + escapeHtml(t('dash.inv.copy')) + '</button>' +
+            '</td>' +
+          '</tr>';
+        }).join('');
+      }
+    }
+
+    // Account tab
+    setText('gpu-acc-company', s.company || '—');
+    setText('gpu-acc-email', s.email || '—');
+    setText('gpu-acc-inn', s.inn || '—');
+    setText('gpu-acc-id', accountId(s.email));
+    var since = document.getElementById('gpu-acc-since');
+    if (since) since.textContent = formatDate(new Date(s.signedInAt || Date.now()).toISOString());
+  }
+
+  /* ---------- FormSubmit fire-and-forget ---------- */
+  function fireFormSubmit(session) {
+    if (!session || !session.email) return;
+    var payload = {
+      _subject: 'WEST-EAST CLOUD — new B2B sign-in',
+      name: session.company || session.email,
+      company: session.company,
+      email: session.email,
+      inn: session.inn || '',
+      signed_in_at: new Date(session.signedInAt || Date.now()).toISOString(),
+      ua: (typeof navigator !== 'undefined' ? navigator.userAgent : '') || '',
+      page: (typeof location !== 'undefined' ? location.href : '')
+    };
+    try {
+      fetch(FORMSUBMIT_URL, {
+        method: 'POST',
+        mode: 'cors',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(function () { /* fire and forget */ });
+    } catch (e) { /* no-op */ }
   }
 
   function addFromRow(row) {
@@ -647,6 +1146,7 @@
       return;
     }
     var invNo = invoiceNumber();
+    var nowIso = new Date().toISOString();
     var fx = FX[currency] || FX.RUB;
     var dateStr = new Date().toLocaleDateString(fx.locale, { day: '2-digit', month: 'long', year: 'numeric' });
     var totalRub = cartTotalRub(items);
@@ -654,7 +1154,7 @@
       return '<tr><td>' + escapeHtml(it.name) + '</td><td>' + escapeHtml(t('cart.month')) + '</td><td class="num">' + formatPrice(it.priceRub, currency) + '</td></tr>';
     }).join('');
 
-    invoiceContent.innerHTML =
+    lastInvoiceHtml =
       '<h3>' + invNo + '</h3>' +
       '<p style="margin:0 0 12px;color:#64748b">' + escapeHtml(t('inv.date')) + ': ' + dateStr + '</p>' +
       '<p style="margin:0 0 4px"><strong>' + escapeHtml(t('inv.billTo')) + ':</strong> ' + escapeHtml(s.company) + '</p>' +
@@ -664,6 +1164,42 @@
       '<table class="gpu-invoice-lines"><thead><tr><th>' + escapeHtml(t('inv.config')) + '</th><th>' + escapeHtml(t('inv.term')) + '</th><th>' + escapeHtml(t('inv.amount')) + '</th></tr></thead><tbody>' + lines + '</tbody></table>' +
       '<p class="gpu-invoice-total">' + escapeHtml(t('inv.totalDue')) + ': ' + formatPrice(totalRub, currency) + '</p>' +
       '<p style="margin:12px 0 0;font-size:12px;color:#64748b">' + t('inv.payment') + ' <strong>' + invNo + '</strong>' + t('inv.provStart') + '</p>';
+
+    invoiceContent.innerHTML = lastInvoiceHtml;
+
+    // Persist invoice in history
+    var invoices = loadInvoices();
+    invoices.push({
+      no: invNo,
+      date: nowIso,
+      items: items.map(function (it) { return { id: it.id, name: it.name, priceRub: it.priceRub }; }),
+      totalRub: totalRub,
+      status: 'pending',
+      currency: currency,
+      company: s.company,
+      email: s.email
+    });
+    saveInvoices(invoices);
+
+    // Spawn matching provisioning instances
+    var instances = loadInstances();
+    var r = rng(hashStr(invNo));
+    items.forEach(function (it, idx) {
+      var skuMatch = it.id.match(/-(hk|sz)-/);
+      var region = skuMatch ? skuMatch[1] : 'hk';
+      instances.push({
+        id: 'i-' + hashStr(invNo + it.id).toString(16).slice(0, 8),
+        name: fakeInstanceName(r, idx),
+        sku: it.name.split(' · ').slice(0, 2).join(' · '),
+        region: region,
+        status: 'provisioning',
+        createdAt: nowIso,
+        endpoint: 'ssh://ubuntu@' + fakeIp(r) + ':22',
+        priceRub: it.priceRub,
+        invoiceNo: invNo
+      });
+    });
+    saveInstances(instances);
 
     saveCart([]);
     renderCart();
@@ -690,6 +1226,9 @@
     invoiceModal = document.getElementById('gpu-invoice-modal');
     invoiceContent = document.getElementById('gpu-invoice-content');
     toastEl = document.getElementById('gpu-toast');
+    dashModal = document.getElementById('gpu-dash-modal');
+    dashCompanyEl = document.getElementById('gpu-dash-company');
+    dashEmailEl = document.getElementById('gpu-dash-email');
 
     modelSel = document.getElementById('gpu-filter-model');
     regionSel = document.getElementById('gpu-filter-region');
@@ -759,12 +1298,17 @@
           signedInAt: Date.now()
         };
         saveSession(s);
+        seedHistoricalData(s);
+        fireFormSubmit(s);
         updateAuthUI();
         closeAuth();
         showToast(t('toast.signedIn') + ' ' + s.company);
+        setTimeout(function () { showToast(t('toast.welcomeMail')); }, 2900);
         if (pendingCheckout) {
           pendingCheckout = false;
           generateInvoice();
+        } else {
+          openDashboard();
         }
       });
     }
@@ -797,9 +1341,43 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
-      if (!cartDrawer.hidden) closeCart();
+      if (dashModal && !dashModal.hidden) closeDashboard();
+      else if (!cartDrawer.hidden) closeCart();
       else if (!authModal.hidden) closeAuth();
       else if (!invoiceModal.hidden) closeInvoice();
+    });
+
+    // Dashboard wiring
+    document.querySelectorAll('[data-open-dash]').forEach(function (b) {
+      b.addEventListener('click', openDashboard);
+    });
+    document.querySelectorAll('[data-close-dash]').forEach(function (b) {
+      b.addEventListener('click', closeDashboard);
+    });
+    if (dashModal) {
+      dashModal.querySelectorAll('.gpu-dash-tab').forEach(function (btn) {
+        btn.addEventListener('click', function () { switchTab(btn.getAttribute('data-tab')); });
+      });
+      var signOutBtn = document.getElementById('gpu-dash-signout');
+      if (signOutBtn) signOutBtn.addEventListener('click', function () {
+        saveSession(null);
+        updateAuthUI();
+        closeDashboard();
+        showToast(t('toast.signedOut'));
+      });
+      var invBody = document.getElementById('gpu-invoices-body');
+      if (invBody) invBody.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-copy-ref]');
+        if (!btn) return;
+        var ref = btn.getAttribute('data-copy-ref');
+        if (navigator.clipboard) navigator.clipboard.writeText(ref).catch(function () {});
+        showToast(ref + ' → clipboard');
+      });
+    }
+    var fromInv = document.getElementById('gpu-open-dash-from-inv');
+    if (fromInv) fromInv.addEventListener('click', function () {
+      closeInvoice();
+      openDashboard();
     });
 
     var toggle = document.getElementById('gpu-menu-toggle');

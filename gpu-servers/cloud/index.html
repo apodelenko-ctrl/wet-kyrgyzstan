@@ -43,7 +43,7 @@
         <button type="button" class="gpu-lang-btn" data-lang="ru">RU</button>
         <button type="button" class="gpu-lang-btn" data-lang="zh">中</button>
       </div>
-      <span class="gpu-account-pill" id="gpu-account-label" hidden></span>
+      <button type="button" class="gpu-account-pill" id="gpu-account-label" data-open-dash hidden></button>
       <button type="button" class="gpu-btn gpu-btn-ghost gpu-btn-sm" id="gpu-auth-btn" data-open-auth data-i18n="auth.signIn">Sign in</button>
       <button type="button" class="gpu-btn gpu-btn-primary gpu-btn-sm gpu-cart-btn" data-open-cart aria-label="Cart">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg>
@@ -700,8 +700,169 @@
     <p class="gpu-modal-lead" data-i18n="inv.lead">Pay against the reference number below. Provisioning starts the moment the wire clears.</p>
     <div class="gpu-invoice-box" id="gpu-invoice-content"></div>
     <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
-      <button type="button" class="gpu-btn gpu-btn-primary" id="gpu-invoice-print" data-i18n="inv.print">Print / Save PDF</button>
+      <button type="button" class="gpu-btn gpu-btn-primary" id="gpu-open-dash-from-inv" data-i18n="inv.cabinet">Open cabinet</button>
+      <button type="button" class="gpu-btn gpu-btn-outline" id="gpu-invoice-print" data-i18n="inv.print">Print / Save PDF</button>
       <button type="button" class="gpu-btn gpu-btn-outline" data-close-invoice data-i18n="inv.close">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cabinet (fake B2B dashboard) -->
+<div class="gpu-dash" id="gpu-dash-modal" hidden>
+  <button type="button" class="gpu-dash-backdrop" tabindex="-1" aria-label="Close" data-close-dash></button>
+  <div class="gpu-dash-panel" role="dialog" aria-modal="true" aria-labelledby="gpu-dash-title">
+    <header class="gpu-dash-head">
+      <div class="gpu-dash-head-info">
+        <p class="gpu-dash-eyebrow">
+          <span class="gpu-status-dot" aria-hidden="true"></span>
+          <span data-i18n="dash.eyebrow">WEST-EAST CLOUD · B2B Cabinet</span>
+        </p>
+        <h2 id="gpu-dash-title">
+          <span data-i18n="dash.welcome">Welcome,</span>
+          <span id="gpu-dash-company">—</span>
+        </h2>
+        <p class="gpu-dash-email" id="gpu-dash-email">—</p>
+      </div>
+      <div class="gpu-dash-head-actions">
+        <button type="button" class="gpu-btn gpu-btn-outline gpu-btn-sm" id="gpu-dash-signout" data-i18n="dash.signOut">Sign out</button>
+        <button type="button" class="gpu-modal-close" aria-label="Close" data-close-dash>&times;</button>
+      </div>
+    </header>
+    <nav class="gpu-dash-tabs" role="tablist">
+      <button type="button" class="gpu-dash-tab is-active" data-tab="overview" role="tab" aria-selected="true">
+        <span data-i18n="dash.tab.overview">Overview</span>
+      </button>
+      <button type="button" class="gpu-dash-tab" data-tab="instances" role="tab">
+        <span data-i18n="dash.tab.instances">Instances</span>
+        <span class="gpu-dash-tab-count" id="gpu-tab-inst-count">0</span>
+      </button>
+      <button type="button" class="gpu-dash-tab" data-tab="invoices" role="tab">
+        <span data-i18n="dash.tab.invoices">Invoices</span>
+        <span class="gpu-dash-tab-count" id="gpu-tab-inv-count">0</span>
+      </button>
+      <button type="button" class="gpu-dash-tab" data-tab="account" role="tab">
+        <span data-i18n="dash.tab.account">Account</span>
+      </button>
+    </nav>
+    <div class="gpu-dash-body">
+
+      <!-- Overview tab -->
+      <section class="gpu-dash-pane is-active" data-pane="overview">
+        <div class="gpu-dash-stats">
+          <div class="gpu-dash-stat">
+            <dt data-i18n="dash.stat.active">Active instances</dt>
+            <dd id="gpu-stat-instances">0</dd>
+          </div>
+          <div class="gpu-dash-stat">
+            <dt data-i18n="dash.stat.spend">Spend this month</dt>
+            <dd id="gpu-stat-spend">—</dd>
+          </div>
+          <div class="gpu-dash-stat">
+            <dt data-i18n="dash.stat.pending">Pending invoices</dt>
+            <dd id="gpu-stat-pending">0</dd>
+          </div>
+          <div class="gpu-dash-stat">
+            <dt data-i18n="dash.stat.gpus">GPUs in use</dt>
+            <dd id="gpu-stat-gpus">0</dd>
+          </div>
+        </div>
+
+        <div class="gpu-dash-grid-2">
+          <article class="gpu-dash-card">
+            <div class="gpu-dash-card-head">
+              <h3 data-i18n="dash.usage">GPU-hours this month</h3>
+              <span class="gpu-dash-meta" id="gpu-usage-meta">—</span>
+            </div>
+            <div class="gpu-dash-chart" id="gpu-usage-chart" aria-hidden="true"></div>
+            <p class="gpu-dash-foot" data-i18n="dash.usage.foot">Aggregated across all running instances. Resets on the 1st of each month UTC+0.</p>
+          </article>
+
+          <article class="gpu-dash-card">
+            <div class="gpu-dash-card-head">
+              <h3 data-i18n="dash.activity">Recent activity</h3>
+            </div>
+            <ul class="gpu-dash-activity" id="gpu-dash-activity">
+              <li class="gpu-dash-empty" data-i18n="dash.activity.empty">No activity yet.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Instances tab -->
+      <section class="gpu-dash-pane" data-pane="instances" hidden>
+        <div class="gpu-dash-section-head">
+          <div>
+            <h3 data-i18n="dash.inst.title">Running &amp; provisioning instances</h3>
+            <p data-i18n="dash.inst.lede">SSH endpoints become live once payment confirmation propagates to the upstream control plane.</p>
+          </div>
+          <a class="gpu-btn gpu-btn-primary gpu-btn-sm" href="#pricing" data-close-dash data-i18n="dash.inst.deploy">+ Deploy new</a>
+        </div>
+        <div class="gpu-dash-table-wrap">
+          <table class="gpu-dash-table">
+            <thead>
+              <tr>
+                <th data-i18n="dash.inst.col.name">Instance</th>
+                <th data-i18n="dash.inst.col.region">Region</th>
+                <th data-i18n="dash.inst.col.status">Status</th>
+                <th data-i18n="dash.inst.col.endpoint">SSH endpoint</th>
+                <th data-i18n="dash.inst.col.uptime">Uptime</th>
+                <th data-i18n="dash.inst.col.rate">Rate</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="gpu-instances-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Invoices tab -->
+      <section class="gpu-dash-pane" data-pane="invoices" hidden>
+        <div class="gpu-dash-section-head">
+          <div>
+            <h3 data-i18n="dash.inv.title">Invoice history</h3>
+            <p data-i18n="dash.inv.lede">All invoices generated against this account. Pending = waiting on wire confirmation.</p>
+          </div>
+        </div>
+        <div class="gpu-dash-table-wrap">
+          <table class="gpu-dash-table">
+            <thead>
+              <tr>
+                <th data-i18n="dash.inv.col.no">Invoice #</th>
+                <th data-i18n="dash.inv.col.date">Date</th>
+                <th data-i18n="dash.inv.col.items">Items</th>
+                <th data-i18n="dash.inv.col.total">Total</th>
+                <th data-i18n="dash.inv.col.status">Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="gpu-invoices-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Account tab -->
+      <section class="gpu-dash-pane" data-pane="account" hidden>
+        <div class="gpu-dash-section-head">
+          <div>
+            <h3 data-i18n="dash.acc.title">Account details</h3>
+            <p data-i18n="dash.acc.lede">Need to amend billing info or change contract terms? Send us an email.</p>
+          </div>
+        </div>
+        <div class="gpu-dash-account">
+          <dl class="gpu-dash-acc-grid">
+            <div><dt data-i18n="dash.acc.company">Legal name</dt><dd id="gpu-acc-company">—</dd></div>
+            <div><dt data-i18n="dash.acc.email">Work email</dt><dd id="gpu-acc-email">—</dd></div>
+            <div><dt data-i18n="dash.acc.inn">Tax ID / ИНН</dt><dd id="gpu-acc-inn">—</dd></div>
+            <div><dt data-i18n="dash.acc.id">Account ID</dt><dd id="gpu-acc-id" class="gpu-mono">—</dd></div>
+            <div><dt data-i18n="dash.acc.since">Member since</dt><dd id="gpu-acc-since">—</dd></div>
+            <div><dt data-i18n="dash.acc.tier">Tier</dt><dd><span class="gpu-dash-pill gpu-dash-pill--ok" data-i18n="dash.acc.tierVal">Verified · Direct contract</span></dd></div>
+          </dl>
+          <div class="gpu-dash-account-foot">
+            <p data-i18n="dash.acc.contact">For billing or contract changes: <a href="mailto:wet4kg@gmail.com">wet4kg@gmail.com</a>. Telegram: <strong>@wet_east_cloud</strong>.</p>
+          </div>
+        </div>
+      </section>
+
     </div>
   </div>
 </div>
